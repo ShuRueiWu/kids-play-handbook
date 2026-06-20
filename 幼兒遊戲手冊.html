@@ -365,7 +365,9 @@
     .bpmf-grid{grid-template-columns:repeat(5,1fr);}
     .cut-grid{grid-template-columns:repeat(4,1fr);}
     .track-grid{grid-template-columns:repeat(3,1fr);}
-    .toolbar{top:0;}
+    /* 手機：導覽與工具列不黏附，避免兩條 sticky 重疊又吃掉螢幕 */
+    nav.jump{position:static;}
+    .toolbar{position:static;}
     header.hero h1{font-size:24px;}
     .wrap{padding:20px 14px 60px;}
     nav.jump{gap:7px; padding:9px;}
