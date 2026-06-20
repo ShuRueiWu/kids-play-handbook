@@ -1,0 +1,2803 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3–5 歲幼兒居家遊戲手冊｜益智・手作・體能</title>
+<style>
+  :root{
+    --bg:#faf8f4;          /* 暖米白頁底 */
+    --card:#fffdf9;        /* 暖白卡片 */
+    --ink:#3c3a35;         /* 內文主字 */
+    --ink2:#6e6557;        /* 次要字 */
+    --h1:#2f2a22;          /* 標題 */
+    --line:#e6ddcf;        /* 邊框 */
+    --dash:#ece3d4;        /* 虛線邊框 */
+    --shadow:0 1px 3px rgba(90,70,40,0.07);
+    --shadow-lg:0 6px 22px rgba(90,70,40,0.10);
+    --blue:#3a6aa8; --blue-bg:#f5f7fc; --blue-line:#dce1ec;
+    --green:#4d8a3f; --green-bg:#f5f8ee; --green-line:#dbe6cb;
+    --amber:#b5710a; --amber-bg:#fdf2e0; --amber-line:#ecd29c; --amber-ink:#8a6a2b;
+    --teal:#0e7280; --teal-bg:#e6f1f0;
+    --badge-bg:#f2c95f; --badge-ink:#3a2c08;
+  }
+  *{box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  html,body{background:var(--bg);}
+  body{
+    margin:0; color:var(--ink);
+    font-family:"PingFang TC","Heiti TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+    line-height:1.7; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:32px 22px 80px;}
+
+  /* ── Header ── */
+  header.hero{
+    text-align:center; padding:34px 22px 30px; margin-bottom:8px;
+    background:linear-gradient(180deg,#fffdf9,#f7f2ea);
+    border:1px solid var(--line); border-radius:22px; box-shadow:var(--shadow);
+  }
+  header.hero .kicker{
+    display:inline-block; font-size:13px; letter-spacing:2px; color:var(--amber);
+    background:var(--amber-bg); border:1px solid var(--amber-line);
+    padding:4px 14px; border-radius:999px; margin-bottom:14px;
+  }
+  header.hero h1{
+    margin:6px 0 10px; color:var(--h1); font-size:30px; line-height:1.3; letter-spacing:.5px;
+  }
+  header.hero p{margin:0 auto; max-width:640px; color:var(--ink2); font-size:15.5px;}
+
+  /* ── Jump nav ── */
+  nav.jump{
+    position:sticky; top:0; z-index:20; margin:18px 0 6px;
+    display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
+    background:rgba(250,248,244,.92); backdrop-filter:blur(6px);
+    padding:12px; border-radius:16px; border:1px solid var(--line);
+  }
+  nav.jump a{
+    text-decoration:none; color:var(--ink); font-size:14.5px; font-weight:600;
+    padding:8px 16px; border-radius:999px; border:1px solid var(--line);
+    background:var(--card); transition:.15s; box-shadow:var(--shadow);
+  }
+  nav.jump a:hover{transform:translateY(-1px); box-shadow:var(--shadow-lg);}
+  nav.jump a.j-puz{border-color:var(--blue-line);}
+  nav.jump a.j-craft{border-color:var(--green-line);}
+  nav.jump a.j-body{border-color:var(--amber-line);}
+
+  /* ── Legend ── */
+  .legend{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:16px 18px; margin:18px 0 6px; box-shadow:var(--shadow);
+  }
+  .legend h4{margin:0 0 10px; color:var(--h1); font-size:15px;}
+  .legend .row{display:flex; flex-wrap:wrap; gap:8px 14px;}
+  .chip{
+    display:inline-flex; align-items:center; gap:6px; font-size:13.5px; color:var(--ink2);
+    background:#f7f2e9; border:1px solid var(--dash); padding:4px 11px; border-radius:999px;
+  }
+  .skill{
+    display:inline-block; font-size:12px; font-weight:600; padding:2px 9px;
+    border-radius:999px; border:1px solid transparent;
+  }
+  .s-fine{color:#0e7280; background:var(--teal-bg); border-color:#cfe6e4;}      /* 精細動作 */
+  .s-gross{color:#a85a16; background:#fbeede; border-color:#f0d6b4;}            /* 大動作 */
+  .s-cog{color:var(--blue); background:var(--blue-bg); border-color:var(--blue-line);} /* 認知 */
+  .s-lang{color:#7a4ca0; background:#f4eefb; border-color:#e3d4f0;}            /* 語言 */
+  .s-social{color:var(--green); background:var(--green-bg); border-color:var(--green-line);} /* 社交情緒 */
+
+  /* ── Section ── */
+  section{margin-top:34px;}
+  .sec-head{
+    display:flex; align-items:center; gap:14px; margin-bottom:6px;
+    padding-bottom:14px; border-bottom:2px solid var(--line);
+  }
+  .sec-head .emoji{font-size:34px; line-height:1;}
+  .sec-head h2{margin:0; font-size:24px; color:var(--h1);}
+  .sec-head .sub{margin:2px 0 0; color:var(--ink2); font-size:14px;}
+  .sec-puz .sec-head h2{color:var(--blue);}
+  .sec-craft .sec-head h2{color:var(--green);}
+  .sec-body .sec-head h2{color:var(--amber);}
+
+  /* ── Grid + cards ── */
+  .grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:20px;
+  }
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:18px;
+    padding:20px 20px 18px; box-shadow:var(--shadow); break-inside:avoid;
+    display:flex; flex-direction:column;
+  }
+  .sec-puz .card{border-top:4px solid var(--blue);}
+  .sec-craft .card{border-top:4px solid var(--green);}
+  .sec-body .card{border-top:4px solid var(--amber);}
+  .card .title{
+    display:flex; align-items:baseline; gap:9px; margin:0 0 4px;
+  }
+  .card .num{
+    font-size:13px; font-weight:700; color:#fff; background:var(--ink2);
+    min-width:26px; height:26px; border-radius:8px; display:inline-flex;
+    align-items:center; justify-content:center; flex:0 0 auto;
+  }
+  .sec-puz .card .num{background:var(--blue);}
+  .sec-craft .card .num{background:var(--green);}
+  .sec-body .card .num{background:var(--amber);}
+  .card h3{margin:0; font-size:18.5px; color:var(--h1); line-height:1.35;}
+
+  .meta{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 12px;}
+  .meta .chip{font-size:12.5px; padding:3px 9px; background:#f7f2e9;}
+
+  .card .lead{margin:0 0 10px; color:var(--ink2); font-size:14.5px;}
+  .steps{margin:0; padding-left:0; list-style:none; counter-reset:s;}
+  .steps li{
+    position:relative; padding:4px 0 4px 30px; font-size:14.7px; counter-increment:s;
+  }
+  .steps li::before{
+    content:counter(s); position:absolute; left:0; top:5px;
+    width:21px; height:21px; border-radius:50%; font-size:12px; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--ink2); background:#f1eadd; border:1px solid var(--dash);
+  }
+  .skills{margin-top:12px; display:flex; flex-wrap:wrap; gap:6px;}
+
+  .variation{
+    margin-top:13px; padding:11px 13px; border-radius:12px;
+    background:var(--blue-bg); border:1px solid var(--blue-line); font-size:13.8px; color:var(--ink);
+  }
+  .sec-craft .variation{background:var(--green-bg); border-color:var(--green-line);}
+  .sec-body .variation{background:var(--amber-bg); border-color:var(--amber-line);}
+  .variation b{color:var(--h1);}
+
+  .tip{
+    margin-top:11px; padding:10px 13px; border-radius:12px;
+    background:var(--amber-bg); border:1px dashed var(--amber-line);
+    font-size:13.5px; color:var(--amber-ink);
+  }
+  .tip b{color:var(--amber);}
+
+  /* ── Age guide / footer note ── */
+  .agebox{
+    margin:30px 0 0; background:var(--card); border:1px solid var(--line);
+    border-radius:18px; padding:22px; box-shadow:var(--shadow);
+  }
+  .agebox h3{margin:0 0 14px; color:var(--h1); font-size:19px;}
+  .agetable{width:100%; border-collapse:collapse; font-size:14px;}
+  .agetable th,.agetable td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--dash); vertical-align:top;}
+  .agetable th{color:var(--blue); font-size:13.5px; width:120px; white-space:nowrap;}
+  .agetable tr:last-child td{border-bottom:none;}
+
+  .safety{
+    margin-top:22px; background:var(--amber-bg); border:1px solid var(--amber-line);
+    border-radius:16px; padding:18px 20px; color:var(--amber-ink); font-size:14px;
+  }
+  .safety h3{margin:0 0 10px; color:var(--amber); font-size:17px;}
+  .safety ul{margin:0; padding-left:20px;} .safety li{margin:4px 0;}
+
+  footer.foot{
+    text-align:center; color:var(--ink2); font-size:13px; margin-top:34px;
+    padding-top:20px; border-top:1px solid var(--line);
+  }
+
+  /* ── Scenario quick-pick ── */
+  .scene-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:20px;}
+  .scene{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:16px 16px 14px; box-shadow:var(--shadow); break-inside:avoid;
+    border-top:4px solid var(--teal);
+  }
+  .scene h4{margin:0 0 4px; font-size:16.5px; color:var(--h1); display:flex; align-items:center; gap:8px;}
+  .scene .tagline{font-size:12.5px; color:var(--ink2); margin:0 0 10px;}
+  .scene ul{margin:0; padding-left:18px;} .scene li{font-size:14px; margin:4px 0; color:var(--ink);}
+
+  /* ── Bopomofo 注音 ── */
+  .sec-bpmf .sec-head h2{color:#7a4ca0;}
+  .bpmf-intro{
+    background:#f4eefb; border:1px solid #e3d4f0; border-radius:14px;
+    padding:14px 16px; margin-top:20px; font-size:14px; color:var(--ink);
+  }
+  .bpmf-intro b{color:#7a4ca0;}
+  .bpmf-grid{display:grid; grid-template-columns:repeat(7,1fr); gap:8px; margin-top:10px;}
+  .bpmf-label{
+    font-size:14px; font-weight:700; color:#7a4ca0;
+    margin-top:18px; padding:4px 2px; border-bottom:1px dashed #e3d4f0;
+  }
+  .bpmf{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:9px 3px 7px; text-align:center; box-shadow:var(--shadow); break-inside:avoid;
+  }
+  .bpmf .sym{font-size:25px; font-weight:700; color:#7a4ca0; line-height:1.05;}
+  .bpmf .word{font-size:11px; color:var(--ink2); margin-top:3px;}
+  .bpmf-games{
+    margin-top:18px; background:var(--card); border:1px solid var(--line);
+    border-radius:16px; padding:18px 20px; box-shadow:var(--shadow);
+  }
+  .bpmf-games h4{margin:0 0 10px; color:var(--h1); font-size:16px;}
+  .bpmf-games ol{margin:0; padding-left:20px;} .bpmf-games li{margin:6px 0; font-size:14.3px;}
+  .bpmf-games b{color:#7a4ca0;}
+
+  /* ── New category accents ── */
+  .sec-music .sec-head h2{color:#c2557a;}   .sec-music .card{border-top:4px solid #c2557a;}   .sec-music .card .num{background:#c2557a;}
+  .sec-sensory .sec-head h2{color:#1f8a8a;} .sec-sensory .card{border-top:4px solid #1f8a8a;} .sec-sensory .card .num{background:#1f8a8a;}
+  .sec-life .sec-head h2{color:#927240;}    .sec-life .card{border-top:4px solid #927240;}    .sec-life .card .num{background:#927240;}
+  .sec-play .sec-head h2{color:#a64b9c;}    .sec-play .card{border-top:4px solid #a64b9c;}    .sec-play .card .num{background:#a64b9c;}
+  .sec-science .sec-head h2{color:#4060b0;} .sec-science .card{border-top:4px solid #4060b0;} .sec-science .card .num{background:#4060b0;}
+  .sec-music .variation{background:#fdeef3; border-color:#f3d4e0;}
+  .sec-sensory .variation{background:#e9f5f5; border-color:#c9e6e6;}
+  .sec-life .variation{background:#f5f0e6; border-color:#e6dcc4;}
+  .sec-play .variation{background:#f8edf6; border-color:#ecd4e8;}
+  .sec-science .variation{background:#eef1fa; border-color:#d6def0;}
+  .sec-tw .sec-head h2{color:#c0492f;}     .sec-tw .card{border-top:4px solid #c0492f;}     .sec-tw .card .num{background:#c0492f;}
+  .sec-world .sec-head h2{color:#2f8f6a;}  .sec-world .card{border-top:4px solid #2f8f6a;}  .sec-world .card .num{background:#2f8f6a;}
+  .sec-brain .sec-head h2{color:#6a4fb0;}  .sec-brain .card{border-top:4px solid #6a4fb0;}  .sec-brain .card .num{background:#6a4fb0;}
+  .sec-tw .variation{background:#fbeeea; border-color:#f0d2c8;}
+  .sec-world .variation{background:#e8f4ef; border-color:#cce6db;}
+  .sec-brain .variation{background:#f0ecfa; border-color:#ddd2f0;}
+
+  /* ── 經典遊戲深入解析（規則 × 各國名稱）── */
+  .deep-sec .sec-head h2{color:#2a7b8c;}
+  .deep{
+    background:var(--card); border:1px solid var(--line); border-left:4px solid #2a7b8c;
+    border-radius:16px; padding:18px 20px; box-shadow:var(--shadow); margin-top:16px; break-inside:avoid;
+  }
+  .deep-title{margin:0; font-size:19px; color:var(--h1); cursor:pointer; display:flex; align-items:baseline; gap:8px;}
+  .deep-title .den{font-size:13px; font-weight:600; color:var(--ink2);}
+  .deep-title .acc-ind{margin-left:auto; align-self:center;}
+  .deep-names{display:flex; flex-wrap:wrap; gap:6px; margin:12px 0 0;}
+  .deep-names .nm{font-size:12.5px; background:#eef4f6; border:1px solid #d4e4e8; border-radius:999px; padding:3px 10px; color:var(--ink);}
+  .deep-names .nm i{color:var(--ink2);}
+  .deep-meta{font-size:13px; color:var(--ink2); margin:10px 0 0; padding:7px 11px; background:#f7f2e9; border-radius:8px;}
+  .deep-body{font-size:14.5px; margin-top:4px;}
+  .deep-body h5{margin:13px 0 4px; font-size:13.5px; color:#2a7b8c; letter-spacing:.3px;}
+  .deep-body ol,.deep-body ul{margin:4px 0; padding-left:22px;}
+  .deep-body li{margin:3px 0;}
+  .deep-body .chant{background:#fff8ec; border:1px dashed #ecd29c; border-radius:8px; padding:8px 12px; margin:6px 0; font-size:13.8px; color:var(--amber-ink);}
+  .deep.collapsed .deep-names,.deep.collapsed .deep-meta,.deep.collapsed .deep-body{display:none;}
+  @media print{ .deep.collapsed .deep-names,.deep.collapsed .deep-meta,.deep.collapsed .deep-body{display:block !important;} }
+
+  /* English title on cards & headers */
+  .card h3 .en{display:block; font-size:12.5px; font-weight:600; color:var(--ink2); letter-spacing:.2px; margin-top:2px;}
+  .sec-head h2 .en{font-size:15px; font-weight:600; color:var(--ink2); margin-left:6px; letter-spacing:.2px;}
+
+  /* Cut-out 注音剪下卡 */
+  .cut-sec{break-before:page;}
+  .cut-grid{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:0; margin-top:16px;
+    border-left:1.5px dashed #c2ab86; border-top:1.5px dashed #c2ab86;
+  }
+  .cut-card{
+    border-right:1.5px dashed #c2ab86; border-bottom:1.5px dashed #c2ab86;
+    padding:14px 4px; text-align:center; min-height:92px;
+    display:flex; flex-direction:column; justify-content:center; break-inside:avoid;
+  }
+  .cut-card .csym{font-size:34px; font-weight:700; color:#7a4ca0; line-height:1;}
+  .cut-card .cword{font-size:12px; color:var(--ink2); margin-top:6px;}
+  .cut-note{font-size:13.8px; color:var(--ink2); margin:6px 0 0;}
+
+  /* English phrases */
+  .en-sec .sec-head h2{color:var(--blue);}
+  .phr-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:18px;}
+  .phr{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:16px 18px; box-shadow:var(--shadow); break-inside:avoid; border-top:4px solid var(--blue);
+  }
+  .phr h4{margin:0 0 10px; font-size:16px; color:var(--h1);}
+  .phr table{width:100%; border-collapse:collapse; font-size:14px;}
+  .phr td{padding:4px 6px; border-bottom:1px solid var(--dash); vertical-align:top;}
+  .phr td.en{font-weight:600; color:var(--blue); white-space:nowrap;}
+  .phr tr:last-child td{border-bottom:none;}
+  .phr .word-row{display:flex; flex-wrap:wrap; gap:7px;}
+  .phr .wchip{font-size:13px; background:var(--blue-bg); border:1px solid var(--blue-line); border-radius:8px; padding:3px 9px; color:var(--ink);}
+  .phr .wchip b{color:var(--blue);}
+
+  /* ── Interactive toolbar（螢幕用，列印隱藏）── */
+  .toolbar{
+    position:sticky; top:60px; z-index:18; margin:16px 0 0;
+    background:rgba(250,248,244,.96); backdrop-filter:blur(6px);
+    border:1px solid var(--line); border-radius:16px; padding:12px 14px; box-shadow:var(--shadow);
+  }
+  .toolbar .tb-row{display:flex; flex-wrap:wrap; gap:8px; align-items:center;}
+  .toolbar .tb-row + .tb-row{margin-top:9px;}
+  .tb-label{font-size:12.5px; font-weight:700; color:var(--ink2); margin-right:2px;}
+  .fbtn{
+    font-size:13.5px; font-weight:600; color:var(--ink); cursor:pointer;
+    background:var(--card); border:1px solid var(--line); border-radius:999px; padding:6px 13px; transition:.12s;
+  }
+  .fbtn:hover{transform:translateY(-1px); box-shadow:var(--shadow);}
+  .fbtn.active{background:var(--blue); color:#fff; border-color:var(--blue);}
+  .fbtn.tb-mat.active{background:var(--green); border-color:var(--green); color:#fff;}
+  .fbtn.tb-rand{background:var(--amber-bg); border-color:var(--amber-line); color:var(--amber);}
+  .tb-search{
+    flex:1; min-width:150px; font-size:14px; color:var(--ink);
+    background:var(--card); border:1px solid var(--line); border-radius:999px; padding:7px 14px; outline:none;
+  }
+  .tb-search:focus{border-color:var(--blue);}
+  .tb-count{font-size:12.5px; color:var(--ink2); margin-left:auto;}
+
+  /* Accordion（卡片展開/收合）*/
+  .card .title{cursor:pointer;}
+  .acc-ind{margin-left:auto; font-size:12px; color:var(--ink2); transition:transform .15s; flex:0 0 auto; align-self:center;}
+  .card.collapsed .acc-ind{transform:rotate(-90deg);}
+  .card.collapsed .lead,
+  .card.collapsed .meta,
+  .card.collapsed .steps,
+  .card.collapsed .skills,
+  .card.collapsed .variation,
+  .card.collapsed .tip{display:none;}
+  .card.collapsed{padding-bottom:16px;}
+  .card.hide{display:none;}
+  .card.flash{animation:flash 1.5s ease;}
+  @keyframes flash{0%,100%{box-shadow:var(--shadow);} 15%,55%{box-shadow:0 0 0 3px var(--amber-line), var(--shadow-lg);}}
+  .sec-empty{display:none;}
+
+  /* 30 天打卡表 */
+  .track-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin-top:18px;}
+  .day{
+    background:var(--card); border:1px solid var(--line); border-radius:14px; padding:11px 9px 10px;
+    box-shadow:var(--shadow); break-inside:avoid; cursor:pointer; position:relative; transition:.12s;
+  }
+  .day:hover{transform:translateY(-1px); box-shadow:var(--shadow-lg);}
+  .day .dnum{font-size:12px; font-weight:700; color:var(--amber);}
+  .day .dgame{font-size:12.8px; color:var(--ink); margin-top:3px; line-height:1.4; padding-right:14px;}
+  .day .dcat{font-size:11px; color:var(--ink2); margin-top:4px;}
+  .day .check{
+    position:absolute; top:9px; right:9px; width:18px; height:18px; border-radius:50%;
+    border:1.5px solid var(--line); background:#fff;
+  }
+  .day.done{background:var(--green-bg); border-color:var(--green-line);}
+  .day.done .check{background:var(--green); border-color:var(--green);}
+  .day.done .check::after{content:"✓"; color:#fff; font-size:12px; font-weight:700; position:absolute; top:-3px; left:3px;}
+  .track-bar{margin-top:14px; font-size:14px; color:var(--ink2);}
+  .track-bar b{color:var(--green);}
+  .track-reset{margin-left:12px; font-size:12.5px; color:var(--amber); cursor:pointer; text-decoration:underline;}
+
+  /* 列印：隱藏互動元件、強制展開卡片 */
+  @media print{
+    .no-print{display:none !important;}
+    .card.collapsed .lead,.card.collapsed .meta,.card.collapsed .steps,
+    .card.collapsed .skills,.card.collapsed .variation,.card.collapsed .tip{display:block !important;}
+    .acc-ind{display:none !important;}
+  }
+
+  /* ── Responsive ── */
+  @media (max-width:760px){
+    .grid{grid-template-columns:1fr;}
+    .scene-grid{grid-template-columns:1fr;}
+    .phr-grid{grid-template-columns:1fr;}
+    .bpmf-grid{grid-template-columns:repeat(5,1fr);}
+    .cut-grid{grid-template-columns:repeat(4,1fr);}
+    .track-grid{grid-template-columns:repeat(3,1fr);}
+    .toolbar{top:0;}
+    header.hero h1{font-size:24px;}
+    .wrap{padding:20px 14px 60px;}
+    nav.jump{gap:7px; padding:9px;}
+    nav.jump a{padding:7px 12px; font-size:13.5px;}
+  }
+
+  /* ── Print（滿版暖米、卡片不跨頁切斷）── */
+  @page{margin:0;}
+  @media print{
+    html,body{background:var(--bg);}
+    body{padding:14mm 12mm;}
+    .wrap{max-width:none; padding:0;}
+    nav.jump{display:none;}
+    .card,.agebox,.safety,header.hero{box-shadow:none;}
+    .card{break-inside:avoid;}
+    section{break-inside:auto;}
+    a{color:inherit; text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ════ HERO ════ -->
+  <header class="hero">
+    <span class="kicker">3–5 歲 ・ 居家陪玩</span>
+    <h1>🧸 幼兒居家遊戲手冊</h1>
+    <p>98 個不用買材料、用家裡現成物就能玩的遊戲，分十一大類：<b>益智・手作・體能・音樂律動・感官・生活自理・扮演情緒・科學・台灣經典童玩・各國民俗・動腦益智</b>，外加<b>注音 ㄅㄆㄇ・中英對照句型・30 天打卡表</b>，並為 12 個跨國經典附上<b>各國名稱與完整規則詳解</b>。每個遊戲都標好玩法步驟、材料、發展益處與變化版。</p>
+    <p style="margin-top:10px; font-size:13.5px; color:var(--amber);">💡 在瀏覽器可用上方工具列<b>搜尋・分類篩選・隨機抽一個</b>，點卡片標題展開玩法；列印（Cmd/Ctrl + P）則自動展開全部成冊。</p>
+  </header>
+
+  <!-- ════ JUMP NAV ════ -->
+  <nav class="jump">
+    <a href="#scene">🧭 情境快選</a>
+    <a class="j-puz" href="#puzzle">🧠 益智</a>
+    <a class="j-craft" href="#craft">✂️ 手作</a>
+    <a class="j-body" href="#body">🤸 體能</a>
+    <a href="#music">🎵 音樂律動</a>
+    <a href="#sensory">🖐️ 感官</a>
+    <a href="#life">🍴 生活自理</a>
+    <a href="#play">🎭 扮演情緒</a>
+    <a href="#science">🔬 科學</a>
+    <a href="#taiwan">🇹🇼 台灣童玩</a>
+    <a href="#world">🌍 各國遊戲</a>
+    <a href="#brain">🧩 動腦益智</a>
+    <a href="#deep">📖 規則詳解</a>
+    <a href="#bpmf">🔤 注音</a>
+    <a href="#cut">✂️ 注音卡</a>
+    <a href="#english">🗣️ 英文句型</a>
+    <a href="#track">📅 30天打卡</a>
+    <a href="#age">📈 適齡</a>
+    <a href="#safety">🛟 安全</a>
+  </nav>
+
+  <!-- ════ INTERACTIVE TOOLBAR（螢幕用）════ -->
+  <div class="toolbar no-print" id="toolbar">
+    <div class="tb-row">
+      <span class="tb-label">🔍</span>
+      <input class="tb-search" id="search" type="text" placeholder="搜尋遊戲關鍵字，如：氣球、顏色、安靜、睡前…">
+      <button class="fbtn tb-rand" id="randBtn">🎲 隨機抽一個</button>
+    </div>
+    <div class="tb-row" id="catRow">
+      <span class="tb-label">分類</span>
+      <button class="fbtn active" data-cat="all">全部</button>
+      <button class="fbtn" data-cat="puzzle">🧠 益智</button>
+      <button class="fbtn" data-cat="craft">✂️ 手作</button>
+      <button class="fbtn" data-cat="body">🤸 體能</button>
+      <button class="fbtn" data-cat="music">🎵 音樂</button>
+      <button class="fbtn" data-cat="sensory">🖐️ 感官</button>
+      <button class="fbtn" data-cat="life">🍴 生活自理</button>
+      <button class="fbtn" data-cat="play">🎭 扮演</button>
+      <button class="fbtn" data-cat="science">🔬 科學</button>
+      <button class="fbtn" data-cat="taiwan">🇹🇼 台灣</button>
+      <button class="fbtn" data-cat="world">🌍 各國</button>
+      <button class="fbtn" data-cat="brain">🧩 益智經典</button>
+    </div>
+    <div class="tb-row">
+      <button class="fbtn tb-mat" id="matBtn">📦 只看零材料</button>
+      <button class="fbtn" id="expandAll">⬇ 展開全部</button>
+      <button class="fbtn" id="collapseAll">⬆ 收合全部</button>
+      <span class="tb-count" id="count"></span>
+    </div>
+  </div>
+
+  <!-- ════ LEGEND ════ -->
+  <div class="legend">
+    <h4>圖示說明</h4>
+    <div class="row" style="margin-bottom:12px;">
+      <span class="chip">⏱️ 建議時長</span>
+      <span class="chip">👥 人數</span>
+      <span class="chip">📦 材料</span>
+      <span class="chip">⭐ 難度（易→難）</span>
+    </div>
+    <div class="row">
+      <span class="skill s-fine">精細動作</span>
+      <span class="skill s-gross">大動作</span>
+      <span class="skill s-cog">認知思考</span>
+      <span class="skill s-lang">語言表達</span>
+      <span class="skill s-social">社交情緒</span>
+    </div>
+  </div>
+
+  <!-- ════ SCENARIO QUICK-PICK ════ -->
+  <section id="scene">
+    <div class="sec-head">
+      <span class="emoji">🧭</span>
+      <div>
+        <h2 style="color:var(--teal);">情境快選</h2>
+        <p class="sub">沒時間想玩什麼？依當下情境直接挑一個</p>
+      </div>
+    </div>
+    <div class="scene-grid">
+
+      <div class="scene">
+        <h4>☔ 雨天悶在家</h4>
+        <p class="tagline">要放電、不能出門</p>
+        <ul>
+          <li>地板是岩漿（體能 3）</li>
+          <li>抱枕障礙賽（體能 4）</li>
+          <li>膠帶跳房子（體能 6）</li>
+          <li>紙箱百變勞作（手作 10）</li>
+          <li>音樂停（體能 9）</li>
+        </ul>
+      </div>
+
+      <div class="scene">
+        <h4>🚗 外出・排隊・車上</h4>
+        <p class="tagline">零道具、安靜不吵</p>
+        <ul>
+          <li>我看到了 I Spy（益智 1）</li>
+          <li>故事接龍（益智 6）</li>
+          <li>猜猜我是誰（益智 10）</li>
+          <li>背上寫數字（益智 12）</li>
+          <li>找開頭音（注音遊戲）</li>
+        </ul>
+      </div>
+
+      <div class="scene">
+        <h4>😴 睡前緩和</h4>
+        <p class="tagline">收心、放慢、助眠</p>
+        <ul>
+          <li>瑜伽動物＋呼吸（體能 12）</li>
+          <li>手影／影子遊戲（體能 5）</li>
+          <li>故事接龍（益智 6）</li>
+          <li>神祕口袋慢慢摸（益智 2）</li>
+          <li>背上畫圖猜一猜（益智 12）</li>
+        </ul>
+      </div>
+
+      <div class="scene">
+        <h4>⚡ 只有 10 分鐘快放電</h4>
+        <p class="tagline">短時間燃燒體力</p>
+        <ul>
+          <li>動物走路接力（體能 1）</li>
+          <li>氣球不落地（體能 2）</li>
+          <li>音樂停 Freeze（體能 9）</li>
+          <li>追泡泡（體能 11）</li>
+          <li>襪子球投準（體能 7）</li>
+        </ul>
+      </div>
+
+      <div class="scene">
+        <h4>🤫 需要安靜專心</h4>
+        <p class="tagline">你要忙、想讓他靜下來</p>
+        <ul>
+          <li>分類大師（益智 3）</li>
+          <li>棉花棒點點畫（手作 6）</li>
+          <li>義大利麵串珠（手作 8）</li>
+          <li>膠帶貼貼樂（手作 11）</li>
+          <li>記憶翻翻樂（益智 5）</li>
+        </ul>
+      </div>
+
+      <div class="scene">
+        <h4>👯 手足／多人同樂</h4>
+        <p class="tagline">兩個以上一起玩</p>
+        <ul>
+          <li>123 木頭人（體能 10）</li>
+          <li>音樂停（體能 9）</li>
+          <li>鏡子模仿（體能 5）</li>
+          <li>記憶翻翻樂（益智 5）</li>
+          <li>老師說（益智 8）</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- A. 益智動腦                                     -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="puzzle" class="sec-puz">
+    <div class="sec-head">
+      <span class="emoji">🧠</span>
+      <div>
+        <h2>A. 益智動腦遊戲<span class="en">Brain &amp; Thinking</span></h2>
+        <p class="sub">幾乎零材料・隨時隨地・練觀察、記憶、分類與語言</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <!-- A1 -->
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>我看到了…（I Spy）</h3></div>
+        <div class="meta"><span class="chip">⏱️ 5–10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">經典觀察遊戲，等公車、排隊、坐車都能玩。</p>
+        <ol class="steps">
+          <li>出題者選一個眼前看得到的東西（先不說）。</li>
+          <li>給線索：「我看到一個<b>紅色</b>的東西」。</li>
+          <li>孩子四處找、用手指猜，猜對換他出題。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>線索換成形狀（圓形）、注音（「ㄅ」開頭）、功能（可以喝水的）來提升難度。</div>
+      </div>
+
+      <!-- A2 -->
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>神祕口袋摸摸看</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 布袋＋小物</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">用觸覺辨認物品，訓練專注與描述能力。</p>
+        <ol class="steps">
+          <li>把湯匙、積木、襪子、水果等放進不透明布袋或枕頭套。</li>
+          <li>孩子把手伸進去，只用摸的猜是什麼。</li>
+          <li>請他先<b>描述</b>：「圓圓的、硬硬的」再說答案。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>指定找「最軟的那個」「兩個一樣的」增加思考層次。</div>
+      </div>
+
+      <!-- A3 -->
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>分類大師</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10–15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 家中雜物</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">分類是數學與邏輯的基礎能力。</p>
+        <ol class="steps">
+          <li>收集一堆小物（鈕扣、積木、瓶蓋、襪子）。</li>
+          <li>請孩子依<b>顏色</b>分堆，完成後改依<b>大小</b>。</li>
+          <li>再問：「還可以怎麼分？」鼓勵自創分類。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>洗好的襪子配對是最實用版本，順便幫忙做家事。</div>
+      </div>
+
+      <!-- A4 -->
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>模式接龍</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人</span><span class="chip">📦 小物／積木</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">辨識規律是早期數學思維。</p>
+        <ol class="steps">
+          <li>用積木排出規律：紅—藍—紅—藍…。</li>
+          <li>停下來問：「接下來是什麼顏色？」</li>
+          <li>讓孩子接著排，再由他出題考你。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>用動作排規律（拍手—踏腳—拍手—…）變成身體版。</div>
+      </div>
+
+      <!-- A5 -->
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>記憶翻翻樂</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10–15 分</span><span class="chip">👥 1–4 人</span><span class="chip">📦 成對小物</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">不用買記憶卡，用家中成對物品就能玩。</p>
+        <ol class="steps">
+          <li>找 4–6 對相同小物（兩個一樣的瓶蓋、兩張一樣的貼紙…）。</li>
+          <li>洗牌後蓋住排好，輪流翻兩個。</li>
+          <li>翻到一樣的就收走，最後比誰配對多。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>3 歲先用 3 對、不蓋住找一樣的；5 歲增加到 8 對。</div>
+      </div>
+
+      <!-- A6 -->
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>故事接龍</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">激發想像力與口語組織。</p>
+        <ol class="steps">
+          <li>開頭：「從前有一隻小貓，牠走著走著……」</li>
+          <li>換孩子接一句，再換你，輪流往下說。</li>
+          <li>故意丟出轉折：「突然下起了……餅乾雨！」</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>抽家中三樣物品當「故事道具」，要求都用進去。</div>
+      </div>
+
+      <!-- A7 -->
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>這是什麼聲音？</h3></div>
+        <div class="meta"><span class="chip">⏱️ 5–10 分</span><span class="chip">👥 2 人</span><span class="chip">📦 家中物品</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">用聽覺專注，安靜又有趣。</p>
+        <ol class="steps">
+          <li>孩子閉眼或背對。</li>
+          <li>你製造聲音：拍手、敲杯子、撕紙、倒水。</li>
+          <li>請他猜剛剛是什麼聲音。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>到戶外閉眼 30 秒，回報「聽到幾種聲音」。</div>
+      </div>
+
+      <!-- A8 -->
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>老師說（聽指令＋反指令）</h3></div>
+        <div class="meta"><span class="chip">⏱️ 5–10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">練自我控制（抑制衝動），是專注力核心。</p>
+        <ol class="steps">
+          <li>只有句首有「老師說」才能做動作。</li>
+          <li>「老師說摸鼻子」→ 做；「拍手」（沒說老師說）→ 不能動。</li>
+          <li>動錯的人換當老師。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>3 歲先不加陷阱、單純跟著做；4–5 歲再加「沒說不能動」。</div>
+      </div>
+
+      <!-- A9 -->
+      <div class="card">
+        <div class="title"><span class="num">9</span><h3>找一找尋寶令</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">把整個家變成尋寶場。</p>
+        <ol class="steps">
+          <li>下令：「去找<b>3 個圓形</b>的東西回來！」</li>
+          <li>孩子在家中蒐集後帶回來給你看。</li>
+          <li>換主題：藍色的、軟的、會發出聲音的。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-gross">大動作</span></div>
+        <div class="variation"><b>變化：</b>給數字任務（找 5 樣）順便數數；計時增加刺激感。</div>
+      </div>
+
+      <!-- A10 -->
+      <div class="card">
+        <div class="title"><span class="num">10</span><h3>猜猜我是誰（20 個問題簡化版）</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">練習用「是非問句」推理。</p>
+        <ol class="steps">
+          <li>你心裡想一個動物。</li>
+          <li>孩子用問題縮小範圍：「牠會飛嗎？」「住在水裡嗎？」</li>
+          <li>你只能回「是／不是」，讓他猜出答案。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>3 歲改成「比手畫腳」用動作模仿讓對方猜。</div>
+      </div>
+
+      <!-- A11 -->
+      <div class="card">
+        <div class="title"><span class="num">11</span><h3>哪裡不一樣？</h3></div>
+        <div class="meta"><span class="chip">⏱️ 5 分</span><span class="chip">👥 2 人</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">觀察力與記憶力的快速小遊戲。</p>
+        <ol class="steps">
+          <li>孩子先仔細看你 10 秒。</li>
+          <li>他閉眼，你改變一個地方（捲起袖子、摘下眼鏡）。</li>
+          <li>睜眼後找出「哪裡不一樣」。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>桌上擺 5 樣東西，趁他閉眼拿走一樣，問少了什麼。</div>
+      </div>
+
+      <!-- A12 -->
+      <div class="card">
+        <div class="title"><span class="num">12</span><h3>數數階梯與隱形數字</h3></div>
+        <div class="meta"><span class="chip">⏱️ 5–10 分</span><span class="chip">👥 1–2 人</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">把數數融入日常，建立數量感。</p>
+        <ol class="steps">
+          <li>上樓梯時一階一階大聲數；發點心數給對方。</li>
+          <li>用手指在他背上「寫」一個數字 1–5，請他猜。</li>
+          <li>反過來讓他寫在你手心，你猜。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>5 歲可寫簡單注音或形狀；也能玩「背上畫圖猜一猜」。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- B. 手作創意                                     -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="craft" class="sec-craft">
+    <div class="sec-head">
+      <span class="emoji">✂️</span>
+      <div>
+        <h2>B. 手作創意<span class="en">Arts &amp; Crafts</span></h2>
+        <p class="sub">只用紙、筆、廚房或回收物・練手部小肌肉與創造力</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <!-- B1 -->
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>撕貼畫</h3></div>
+        <div class="meta"><span class="chip">⏱️ 15–20 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 廢紙＋膠水</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">用「撕」的取代剪刀，最安全的精細動作練習。</p>
+        <ol class="steps">
+          <li>給舊報紙、廣告紙、色紙，讓孩子撕成小塊。</li>
+          <li>在白紙上畫個簡單輪廓（蘋果、太陽）。</li>
+          <li>塗膠水把紙片貼滿輪廓，完成拼貼。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>同色系撕貼（全部藍）練顏色辨識；揉成紙球貼出立體感。</div>
+        <div class="tip"><b>益處：</b>「撕」需要雙手反向用力，是握筆與用剪刀的前置能力。</div>
+      </div>
+
+      <!-- B2 -->
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>鹽麵團黏土</h3></div>
+        <div class="meta"><span class="chip">⏱️ 30 分+</span><span class="chip">👥 1 人+</span><span class="chip">📦 麵粉＋鹽＋水</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">自製無毒黏土，比市售黏土更省錢安全。</p>
+        <ol class="steps">
+          <li>麵粉 2 杯＋鹽 1 杯＋水約 ¾ 杯（可加食用油更滑順）。</li>
+          <li>一起揉成不黏手的麵團（太黏加粉、太乾加水）。</li>
+          <li>搓、壓、捏出小球、長條、動物，用叉子壓花紋。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>分幾球各滴一種食用色素變彩色；作品可烤乾或風乾保存。</div>
+        <div class="tip"><b>益處：</b>揉捏能強化手掌與手指肌力，幫助日後握筆穩定。</div>
+      </div>
+
+      <!-- B3 -->
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>蠟筆拓印</h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 紙＋蠟筆</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">把紋路「印」出來，驚喜感十足。</p>
+        <ol class="steps">
+          <li>找有紋路的東西：葉子、硬幣、瓦楞紙、鑰匙。</li>
+          <li>把紙蓋在上面壓住。</li>
+          <li>用蠟筆<b>側面</b>輕輕來回塗，紋路就浮現了。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>到公園收集不同葉子做「葉子圖鑑」；多色疊塗更繽紛。</div>
+      </div>
+
+      <!-- B4 -->
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>手掌印・手指印畫</h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 顏料／印泥</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">用身體當畫筆，留下成長紀念。</p>
+        <ol class="steps">
+          <li>手掌沾上可水洗顏料，蓋在紙上。</li>
+          <li>引導聯想：手掌印加眼睛變孔雀、五指變刺蝟。</li>
+          <li>用手指點點變成花、葡萄、毛毛蟲。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>蓋上日期當每月成長紀錄；怕髒可改用印泥或濕海綿沾水在地磚上畫。</div>
+      </div>
+
+      <!-- B5 -->
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>紙盤／紙杯面具</h3></div>
+        <div class="meta"><span class="chip">⏱️ 25 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 紙盤＋筆</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">做完還能玩角色扮演，一兼二顧。</p>
+        <ol class="steps">
+          <li>紙盤畫上動物臉，挖兩個眼洞（大人代勞）。</li>
+          <li>孩子塗色、貼撕好的紙當鬃毛或耳朵。</li>
+          <li>黏上吸管或筷子當握把，完成面具。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-social">社交情緒</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>做一家人面具來演故事；沒紙盤可用紙杯做「望遠鏡」。</div>
+      </div>
+
+      <!-- B6 -->
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>棉花棒點點畫</h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 棉花棒＋顏料</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">用點的方式作畫，練手眼協調。</p>
+        <ol class="steps">
+          <li>先用鉛筆畫個簡單輪廓（樹、彩虹、櫻花）。</li>
+          <li>棉花棒沾顏料，沿著輪廓一點一點點上去。</li>
+          <li>不同顏色換不同棉花棒，避免混色。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>點成數字或注音輪廓；用叉子背面沾色印「草叢」。</div>
+      </div>
+
+      <!-- B7 -->
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>寶特瓶沙鈴</h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 空瓶＋米／豆</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">自製樂器，做完馬上開演奏會。</p>
+        <ol class="steps">
+          <li>乾淨空瓶裝入米、豆子或小鈕扣（約 ⅓ 滿）。</li>
+          <li>瓶蓋鎖緊，<b>用膠帶封死</b>避免打開。</li>
+          <li>搖出不同節奏，配著音樂打拍子。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>裝不同材料比較聲音大小；瓶外貼紙裝飾。</div>
+        <div class="tip"><b>安全：</b>瓶蓋務必封緊，避免幼兒倒出小物誤食。</div>
+      </div>
+
+      <!-- B8 -->
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>義大利麵串珠</h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 通心粉＋線</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">用空心麵當珠子，超高 CP 值精細訓練。</p>
+        <ol class="steps">
+          <li>用空心的通心粉（penne／水管麵）當珠子。</li>
+          <li>準備一條鞋帶或粗棉線，一端打結。</li>
+          <li>孩子把麵一個個穿過去，做成項鍊或手環。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>先把麵染色（夾鏈袋＋色素＋少許醋搖勻晾乾），再依顏色規律串。</div>
+        <div class="tip"><b>益處：</b>「穿線」整合雙手協調與專注，是書寫前的重要準備。</div>
+      </div>
+
+      <!-- B9 -->
+      <div class="card">
+        <div class="title"><span class="num">9</span><h3>簡單摺紙（小狗・鬱金香）</h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 一張方紙</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">幾步驟就完成，建立成就感。</p>
+        <ol class="steps">
+          <li><b>小狗頭：</b>方紙對折成三角形，兩個角往下折當耳朵。</li>
+          <li>畫上眼睛、鼻子，一隻狗就完成。</li>
+          <li>熟練後挑戰鬱金香、紙船等多步驟款。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>大人先示範一步、孩子跟一步；用「對齊角角」當口訣。</div>
+      </div>
+
+      <!-- B10 -->
+      <div class="card">
+        <div class="title"><span class="num">10</span><h3>紙箱百變勞作</h3></div>
+        <div class="meta"><span class="chip">⏱️ 30 分+</span><span class="chip">👥 1 人+</span><span class="chip">📦 回收紙箱</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">大紙箱是幼兒最愛的萬能玩具。</p>
+        <ol class="steps">
+          <li>找一個大紙箱，問孩子「想把它變成什麼？」</li>
+          <li>小箱：當汽車、機器人、信箱；大箱：當小房子、隧道。</li>
+          <li>挖門窗（大人代勞）、塗色、貼紙裝飾。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>小紙盒貼一貼變「投幣存錢筒」；連兩箱做火車。</div>
+      </div>
+
+      <!-- B11 -->
+      <div class="card">
+        <div class="title"><span class="num">11</span><h3>膠帶貼貼樂（無顏料創作）</h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 紙膠帶</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">不沾手、不弄髒，最適合外出時打發時間。</p>
+        <ol class="steps">
+          <li>給一卷紙膠帶（可撕款）和一張白紙。</li>
+          <li>撕成小段，在紙上拼出馬路、房子、圖案。</li>
+          <li>撕、貼、調整，玩構圖也練手指。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>在地板貼出「停車格」「賽道」，接到體能遊戲玩小車。</div>
+      </div>
+
+      <!-- B12 -->
+      <div class="card">
+        <div class="title"><span class="num">12</span><h3>自然素材拼貼</h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 戶外撿的</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">把散步撿到的寶貝變成藝術品。</p>
+        <ol class="steps">
+          <li>散步時收集落葉、小樹枝、花瓣、石頭。</li>
+          <li>回家在紙上排出圖案：葉子當魚身、樹枝當太陽光。</li>
+          <li>滿意後用膠水固定，或單純排好拍照。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>邊做邊聊「這片葉子從哪裡來」連結自然觀察。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- C. 體能放電                                     -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="body" class="sec-body">
+    <div class="sec-head">
+      <span class="emoji">🤸</span>
+      <div>
+        <h2>C. 體能放電遊戲<span class="en">Active &amp; Gross Motor</span></h2>
+        <p class="sub">室內客廳就能玩・練大肌肉、平衡與協調・有效放電</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <!-- C1 -->
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>動物走路大隊接力</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">模仿動物移動，全身肌肉都動到。</p>
+        <ol class="steps">
+          <li>熊走：手腳著地、屁股翹高向前爬。</li>
+          <li>螃蟹走：手腳撐地、肚子朝上橫著走。</li>
+          <li>兔跳、青蛙跳、企鵝夾腳走輪流來。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>抽卡片決定學哪種動物；從房間一頭走到另一頭比賽。</div>
+      </div>
+
+      <!-- C2 -->
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>氣球不落地</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10–15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 一顆氣球</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">氣球飄得慢，最適合練追視與反應。</p>
+        <ol class="steps">
+          <li>把氣球往上拍，目標：不能讓它碰到地板。</li>
+          <li>一起合作數「拍到第幾下」破紀錄。</li>
+          <li>進階：只能用頭、只能用單手、只能吹氣。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>地上貼一條膠帶當「球網」隔空對打，變排球。</div>
+        <div class="tip"><b>安全：</b>未充氣氣球與碎片有窒息風險，玩完立即收好。</div>
+      </div>
+
+      <!-- C3 -->
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>地板是岩漿</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 抱枕／坐墊</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">經典想像力＋平衡遊戲。</p>
+        <ol class="steps">
+          <li>地板想像成熱岩漿，碰到就「燙到」。</li>
+          <li>把抱枕、坐墊、巧拼當安全島鋪在地上。</li>
+          <li>只能踩著島從起點移動到終點。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>抽走一塊墊子增加距離；限時通關更刺激。</div>
+      </div>
+
+      <!-- C4 -->
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>抱枕障礙賽</h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 家具＋抱枕</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">用家裡現成物搭一條闖關路線。</p>
+        <ol class="steps">
+          <li>鑽過椅子下、跨過抱枕、繞過茶几。</li>
+          <li>沿膠帶線走平衡、跳進呼拉圈（或地上的圈）。</li>
+          <li>計時跑一圈，再挑戰刷新自己的紀錄。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>讓孩子<b>自己設計</b>關卡並解說規則，練表達與規劃。</div>
+      </div>
+
+      <!-- C5 -->
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>影子遊戲・鏡子模仿</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">同步模仿動作，練身體覺察。</p>
+        <ol class="steps">
+          <li>兩人面對面，一人當「鏡子」。</li>
+          <li>領導者慢慢做動作，鏡子要同步跟著做。</li>
+          <li>30 秒後交換角色。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>晴天到戶外踩對方的影子；室內用手電筒在牆上玩手影。</div>
+      </div>
+
+      <!-- C6 -->
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>膠帶跳房子</h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 紙膠帶</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">在室內地板貼出跳格，下雨天也能跳。</p>
+        <ol class="steps">
+          <li>用紙膠帶在地上貼出 1–8 號格子。</li>
+          <li>丟一個襪子球到格子裡，那格要跳過去。</li>
+          <li>單腳、雙腳交替跳完再折返。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>格子裡寫數字邊跳邊唸；或畫顏色，喊到哪色跳哪格。</div>
+      </div>
+
+      <!-- C7 -->
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>襪子球投準</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 襪子＋籃</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">把襪子捲成球，安全又不怕砸壞東西。</p>
+        <ol class="steps">
+          <li>幾雙襪子各捲成一顆軟球。</li>
+          <li>放一個臉盆或紙箱當籃框。</li>
+          <li>站在線後投，進一球得一分，往後退增加難度。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>兩人對丟接球練手眼協調；貼數字桶丟中加總分。</div>
+      </div>
+
+      <!-- C8 -->
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>平衡小挑戰</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 膠帶／不用</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">平衡是運動發展的重要里程碑。</p>
+        <ol class="steps">
+          <li>地上貼一條直線，腳跟接腳尖走過去。</li>
+          <li>挑戰單腳站，數能撐幾秒。</li>
+          <li>頭上頂一本小書走路不掉下來。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>閉眼單腳站（扶著）更難；走線時手端「裝水的杯子」。</div>
+      </div>
+
+      <!-- C9 -->
+      <div class="card">
+        <div class="title"><span class="num">9</span><h3>音樂停（Freeze Dance）</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10–15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 音樂</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">放電＋自我控制一次滿足。</p>
+        <ol class="steps">
+          <li>放音樂，大家盡情跳舞。</li>
+          <li>音樂一停，所有人立刻「定格」不能動。</li>
+          <li>動到的人暫停一輪或當「音樂控制員」。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>停住時要擺指定姿勢（單腳、動物造型）增加難度。</div>
+      </div>
+
+      <!-- C10 -->
+      <div class="card">
+        <div class="title"><span class="num">10</span><h3>紅綠燈・123 木頭人</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">跑跑停停，練聽指令與煞車控制。</p>
+        <ol class="steps">
+          <li>鬼背對大家喊「1、2、3 木頭人！」。</li>
+          <li>喊的時候別人前進，回頭時要立刻不動。</li>
+          <li>被抓到動的人退回起點，先摸到鬼的人贏。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>室內空間小，改成「紅燈停、綠燈走、黃燈慢慢走」。</div>
+      </div>
+
+      <!-- C11 -->
+      <div class="card">
+        <div class="title"><span class="num">11</span><h3>泡泡追追樂</h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 泡泡水</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">追泡泡、拍泡泡，跑跳跳一身汗。</p>
+        <ol class="steps">
+          <li>大人吹泡泡，孩子追著拍破。</li>
+          <li>指定只能用手指戳、用腳踩、用拍手夾。</li>
+          <li>比賽「誰先戳破 10 個」。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>泡泡水可自製（水＋洗碗精少許＋一點糖更耐吹）；戶外玩更盡興。</div>
+      </div>
+
+      <!-- C12 -->
+      <div class="card">
+        <div class="title"><span class="num">12</span><h3>瑜伽動物・收操伸展</h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">適合睡前的緩和放電，幫助情緒平靜。</p>
+        <ol class="steps">
+          <li>貓式：手腳著地，拱背又凹背。</li>
+          <li>樹式：單腳站、雙手往上像樹枝。</li>
+          <li>蝴蝶式：坐著腳掌相對，膝蓋上下拍。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>每個動作配呼吸「吸—吐」，搭柔和音樂當睡前儀式。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- E. 音樂律動                                     -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="music" class="sec-music">
+    <div class="sec-head">
+      <span class="emoji">🎵</span>
+      <div>
+        <h2>E. 音樂律動<span class="en">Music &amp; Movement</span></h2>
+        <p class="sub">唱唱跳跳・練節奏、聽覺與身體協調・幾乎零材料</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>手指謠帶動唱<span class="en">Finger Rhymes &amp; Sing-along</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 5–10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">用熟悉兒歌配動作，語言與律動一起來。</p>
+        <ol class="steps">
+          <li>選一首兒歌（頭兒肩膀膝腳趾、小星星、兩隻老虎）。</li>
+          <li>邊唱邊比動作，放慢讓孩子跟上。</li>
+          <li>故意唱錯一個部位，看他抓包糾正你。</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>加快速度挑戰；換英文版〈Head, Shoulders, Knees and Toes〉順便學英文。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>鍋碗瓢盆打擊樂<span class="en">Pots &amp; Pans Band</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 鍋碗＋木匙</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">廚房就是樂團，敲出高低不同的聲音。</p>
+        <ol class="steps">
+          <li>拿出不同鍋子、塑膠盆，給一支木湯匙當鼓棒。</li>
+          <li>比較哪個聲音高、哪個低、哪個最響。</li>
+          <li>跟著音樂打拍子，或來場即興演奏會。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>排成「鼓組」由低到高；蒙眼敲一個讓對方猜是哪個。</div>
+        <div class="tip"><b>安全：</b>避開易碎的瓷器與玻璃。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>節奏模仿<span class="en">Echo Clapping</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 5 分</span><span class="chip">👥 2 人</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">你拍、我複誦，練聽覺記憶與專注。</p>
+        <ol class="steps">
+          <li>你拍一段簡單節奏（啪—啪啪）。</li>
+          <li>孩子要原樣拍回來。</li>
+          <li>由短到長慢慢加難度，再換他出題。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-gross">大動作</span></div>
+        <div class="variation"><b>變化：</b>改用踏腳、拍腿、彈舌變化音色，更有挑戰。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>絲巾飄飄舞<span class="en">Scarf Dancing</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 絲巾／毛巾</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">拿條輕飄飄的布，隨音樂自由舞動。</p>
+        <ol class="steps">
+          <li>一人一條絲巾或小毛巾。</li>
+          <li>放音樂，跟著旋律上下揮、繞圈、拋接。</li>
+          <li>音樂一停，把絲巾頂在頭上不能動。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>用絲巾當「風」吹動想像的落葉；往上拋再接住練追視。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>快快慢慢走<span class="en">Fast &amp; Slow Music</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 音樂</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">用音樂速度控制身體節奏，練聽覺反應。</p>
+        <ol class="steps">
+          <li>快節奏音樂 → 快步走或小跑步。</li>
+          <li>慢音樂 → 像烏龜一樣慢慢移動。</li>
+          <li>音樂停 → 立刻定住不動。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>加入「大聲＝跳高、小聲＝蹲低」的音量版。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>自製麥克風開唱<span class="en">Paper-Mic Karaoke</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 紙捲</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">捲張紙當麥克風，勇敢開口唱。</p>
+        <ol class="steps">
+          <li>把紙捲成筒狀當麥克風（或用空保鮮膜捲軸）。</li>
+          <li>輪流點歌、上台唱一首。</li>
+          <li>全家當觀眾用力鼓掌、安可。</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>加動作邊唱邊演；錄下來回放，孩子超有成就感。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>身體打擊樂<span class="en">Body Percussion</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 5–10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">身體就是樂器，零道具也能打節奏。</p>
+        <ol class="steps">
+          <li>示範四種聲音：拍手、踏腳、拍腿、彈舌。</li>
+          <li>排出順序「拍手—踏腳—拍腿」一起做。</li>
+          <li>跟著音樂打，或玩「我做你跟」接龍。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>配〈We Will Rock You〉踏—踏—拍超有感；加快速度挑戰。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>敲敲水杯琴<span class="en">Water-Glass Xylophone</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 玻璃杯＋水</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">水位不同、音高不同，音樂加科學。</p>
+        <ol class="steps">
+          <li>幾個玻璃杯裝不同高度的水。</li>
+          <li>用湯匙輕敲，聽聽看哪杯高、哪杯低。</li>
+          <li>由低到高排好，敲出簡單旋律。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>加食用色素讓每杯不同色更好認；猜「水多聲音高還是低？」</div>
+        <div class="tip"><b>安全：</b>玻璃杯易碎，敲擊力道放輕、大人在旁。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- F. 感官探索                                     -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="sensory" class="sec-sensory">
+    <div class="sec-head">
+      <span class="emoji">🖐️</span>
+      <div>
+        <h2>F. 感官探索<span class="en">Sensory Play</span></h2>
+        <p class="sub">摸、倒、聞、看・用五感認識世界・廚房材料就能玩</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>感官箱挖寶<span class="en">Sensory Bin</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分+</span><span class="chip">👥 1 人+</span><span class="chip">📦 生米/豆＋容器</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">把手埋進米堆，最療癒的觸覺遊戲。</p>
+        <ol class="steps">
+          <li>大盆裝生米、紅豆或乾的義大利麵。</li>
+          <li>藏入小湯匙、量杯、小玩具。</li>
+          <li>讓孩子撈、倒、挖寶，盡情感受。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>加漏斗、杯子玩「倒來倒去」；藏注音/數字卡找出來。</div>
+        <div class="tip"><b>安全：</b>仍會放嘴巴的孩子需全程看顧，避免誤食。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>玩水洗洗樂<span class="en">Water Play</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 水盆＋杯子</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">一盆水就能玩很久，順便練倒水。</p>
+        <ol class="steps">
+          <li>浴室或陽台放一盆水。</li>
+          <li>給杯子、湯匙、海綿、塑膠小玩具。</li>
+          <li>倒水、擠海綿、幫玩具「洗澡」。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>加幾滴泡泡玩泡泡水；丟東西玩「浮起來/沉下去」。</div>
+        <div class="tip"><b>安全：</b>玩水全程不離視線，玩完立刻倒掉。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>冰塊融化大發現<span class="en">Melting Ice</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 冰塊</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">觀察冰怎麼變成水，最初階的科學。</p>
+        <ol class="steps">
+          <li>幾顆冰塊放在盤子裡。</li>
+          <li>摸摸看「冰冰的、滑滑的」。</li>
+          <li>比賽用手握、吹氣、加溫水，哪個融最快。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>冰塊裡先凍一個小玩具，看「救出來」要多久。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>質地大搜查<span class="en">Texture Hunt</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 家中物品</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">用手分辨軟硬、粗滑，連到語言描述。</p>
+        <ol class="steps">
+          <li>蒐集不同質地：毛巾、棉花、湯匙、海綿、粗紙。</li>
+          <li>一個個摸，說出「軟／硬／粗／滑」。</li>
+          <li>閉眼摸，猜這是哪一個。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>分成「我喜歡摸／不喜歡摸」兩堆，聊聊感受。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>自製雲朵沙<span class="en">Cloud Dough</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 25 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 麵粉＋油</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">麵粉加一點油，捏出鬆軟可塑形的沙。</p>
+        <ol class="steps">
+          <li>麵粉 8 份＋食用油 1 份，攪拌到能捏成團。</li>
+          <li>用手抓、壓、堆成小山、小餅。</li>
+          <li>用餅乾模或杯子壓出形狀。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>加一點可可粉變「巧克力沙」（多了顏色與香氣）；玩完裝罐保存。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>聞聞看猜味道<span class="en">Smell &amp; Guess</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人</span><span class="chip">📦 廚房香料</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">用嗅覺探索，認識生活中的氣味。</p>
+        <ol class="steps">
+          <li>幾個小杯各放：橘子皮、咖啡、肥皂、薄荷葉。</li>
+          <li>孩子閉眼聞一聞。</li>
+          <li>猜是什麼味道，喜歡還是不喜歡。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>配對版——兩杯同味道把它找出來。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>赤腳觸覺步道<span class="en">Texture Walk</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 家中軟硬物</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">用腳底感受不同材質，刺激感覺統合。</p>
+        <ol class="steps">
+          <li>地上排一條路線：毛巾、泡棉墊、瓦楞紙、巧拼。</li>
+          <li>脫鞋赤腳慢慢走過去。</li>
+          <li>說說看「軟軟的、刺刺的、涼涼的」。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>閉眼走（牽著）猜踩到哪一段；加一盆溫水當「最後一站」。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>感官瓶搖搖看<span class="en">Calm-down Bottle</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 寶特瓶＋亮片</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">搖一搖看亮片慢慢沉，情緒也跟著靜下來。</p>
+        <ol class="steps">
+          <li>透明瓶裝水＋幾滴膠水（讓亮片沉得慢）＋亮片。</li>
+          <li>瓶蓋鎖緊並<b>用膠帶封死</b>。</li>
+          <li>搖一搖，盯著亮片旋轉、慢慢落下。</li>
+        </ol>
+        <div class="skills"><span class="skill s-social">社交情緒</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>當「生氣冷靜瓶」：情緒大時搖一搖，等亮片全沉就深呼吸過了。</div>
+        <div class="tip"><b>安全：</b>瓶蓋封死，避免幼兒打開誤食亮片。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- G. 生活自理小幫手                                -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="life" class="sec-life">
+    <div class="sec-head">
+      <span class="emoji">🍴</span>
+      <div>
+        <h2>G. 生活自理小幫手<span class="en">Practical Life</span></h2>
+        <p class="sub">蒙特梭利風格・真實任務最有成就感・練手指與獨立</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>夾豆豆搬搬樂<span class="en">Tonging &amp; Transferring</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人</span><span class="chip">📦 夾子＋豆/棉球</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">用夾子搬東西，超強的手指肌力訓練。</p>
+        <ol class="steps">
+          <li>一盤放棉球或大豆子，旁邊放一個空碗。</li>
+          <li>用夾子（或曬衣夾、湯匙）一顆顆夾過去。</li>
+          <li>全部搬完，再換邊搬回來。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>用筷子升級難度；依顏色夾到不同碗（加入分類）。</div>
+        <div class="tip"><b>益處：</b>夾的動作直接練到握筆需要的三指肌群。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>倒水練習<span class="en">Pouring Water</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人</span><span class="chip">📦 兩個杯子</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">蒙特梭利經典，練手眼控制與專注。</p>
+        <ol class="steps">
+          <li>小水壺或杯子裝半滿水。</li>
+          <li>慢慢倒進另一個杯子，盡量不灑出。</li>
+          <li>灑了就一起拿抹布擦（擦也是練習）。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>先用乾的米/豆練習比較不怕灑；杯上貼線當「倒到這裡」。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>摺小毛巾<span class="en">Folding Cloths</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人</span><span class="chip">📦 小方巾</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">邊幫忙家事邊練對稱與順序。</p>
+        <ol class="steps">
+          <li>給幾條小手帕或方巾。</li>
+          <li>示範「角對角、邊對邊」對摺。</li>
+          <li>摺好疊成一落，收進籃子。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>毛巾上畫對齊記號幫助對準；比賽誰摺得最平整。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>釦子拉鍊大挑戰<span class="en">Buttons &amp; Zips</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人</span><span class="chip">📦 舊衣物</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">自理關鍵能力，每天穿衣都用得到。</p>
+        <ol class="steps">
+          <li>拿一件有大釦子的舊外套或襯衫。</li>
+          <li>練習扣釦、解釦、拉拉鍊。</li>
+          <li>熟了再挑戰自己衣服上的小釦子。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>把扣釦想成「餵小怪獸吃飯」，增加趣味。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>擺餐具排排站<span class="en">Setting the Table</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人</span><span class="chip">📦 餐具</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">真實任務最有成就感，融入每天用餐前。</p>
+        <ol class="steps">
+          <li>數一數今天家裡有幾個人。</li>
+          <li>一人一份，排好碗、湯匙、杯子。</li>
+          <li>完成後當「今天的小幫手」被謝謝。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>在餐墊上畫出碗、匙的位置當對位提示（一對一對應）。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>自己穿鞋分左右<span class="en">Shoes On!</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人</span><span class="chip">📦 一雙鞋</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">學會分左右，建立身體概念與自理。</p>
+        <ol class="steps">
+          <li>把兩隻鞋擺好：鞋頭朝外＝對，向內＝要交換。</li>
+          <li>口訣「兩隻鞋變朋友（外八）就是對的」。</li>
+          <li>自己套上、黏好魔鬼氈。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>鞋內各貼半張貼紙，左右合起來剛好成一張圖＝擺對了。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>湯匙舀舀樂<span class="en">Spooning</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人</span><span class="chip">📦 湯匙＋豆/米</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">用湯匙把東西舀來舀去，吃飯前的暖身。</p>
+        <ol class="steps">
+          <li>一碗放豆子或米，旁邊放一個空碗。</li>
+          <li>用湯匙一匙一匙舀過去，盡量不灑。</li>
+          <li>舀完換邊舀回來。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>換大小不同的湯匙比較；直接連到「自己舀飯吃」。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>擦桌掃地小幫手<span class="en">Wiping &amp; Sweeping</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人</span><span class="chip">📦 抹布/小掃把</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">真的做家事，孩子最有「我長大了」的成就感。</p>
+        <ol class="steps">
+          <li>給一塊濕抹布，示範把桌子擦一圈。</li>
+          <li>灑一點米當「待掃區」，用小掃把掃進畚箕。</li>
+          <li>完成後一起說「哇，變乾淨了！」</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-fine">精細動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>地上貼膠帶框出「要掃進去的圈」當目標。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- H. 扮演與情緒                                    -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="play" class="sec-play">
+    <div class="sec-head">
+      <span class="emoji">🎭</span>
+      <div>
+        <h2>H. 扮演與情緒<span class="en">Pretend &amp; Emotions</span></h2>
+        <p class="sub">角色扮演・發展想像力、語言與情緒理解・零成本</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>扮家家酒餐廳<span class="en">Kitchen &amp; Restaurant</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分+</span><span class="chip">👥 1 人+</span><span class="chip">📦 玩具/空盒</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">角色扮演經典，發展語言與想像。</p>
+        <ol class="steps">
+          <li>用空盒、積木當食材，玩偶當客人。</li>
+          <li>孩子當廚師/老闆，負責「點餐、煮飯、上菜」。</li>
+          <li>大人當客人：「我要一碗麵，謝謝！」一來一往。</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-social">社交情緒</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>加「結帳」用瓶蓋當錢幣，順便玩數數與付錢。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>看醫生遊戲<span class="en">Doctor Play</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 2 人</span><span class="chip">📦 玩偶</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">演看診能降低孩子對醫院的害怕。</p>
+        <ol class="steps">
+          <li>玩偶當病人，孩子當醫生。</li>
+          <li>用手量體溫、聽心跳、貼「OK 繃」。</li>
+          <li>角色交換，換孩子當病人被檢查。</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>演「打針不怕怕」，幫孩子預演就醫，看診前玩特別有用。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>襪子玩偶劇場<span class="en">Sock Puppet Show</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 舊襪子</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">把手伸進襪子，角色就活起來。</p>
+        <ol class="steps">
+          <li>舊襪子套在手上，畫上或貼眼睛、嘴巴。</li>
+          <li>躲在沙發後當舞台，讓玩偶探出頭。</li>
+          <li>演一段小故事或對話。</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-social">社交情緒</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>兩隻襪偶對話練「輪流說話」；演孩子今天發生的事。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>情緒臉譜配對<span class="en">Emotion Faces</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人</span><span class="chip">📦 紙＋筆</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">認識並說出情緒，是情緒管理的第一步。</p>
+        <ol class="steps">
+          <li>畫幾張臉：開心、生氣、難過、害怕。</li>
+          <li>你做一個表情，孩子找出對應的臉。</li>
+          <li>聊聊「什麼時候你會這樣？」</li>
+        </ol>
+        <div class="skills"><span class="skill s-social">社交情緒</span><span class="skill s-lang">語言表達</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>照鏡子模仿表情；讀繪本時暫停問「他現在什麼心情？」</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>假裝開車去旅行<span class="en">Pretend Driving</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 椅子/圓盤</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">用想像力出門，零成本的冒險。</p>
+        <ol class="steps">
+          <li>排兩張椅子當車，圓盤當方向盤。</li>
+          <li>「繫安全帶、踩油門、紅燈停」一起演。</li>
+          <li>報站名，假裝開到動物園、海邊。</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-social">社交情緒</span><span class="skill s-gross">大動作</span></div>
+        <div class="variation"><b>變化：</b>串到「目的地」玩相關扮演（到海邊撿貝殼、餵動物）。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>換裝變身秀<span class="en">Dress-up Roles</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 家中衣物</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">披上大人衣物，扮演不同角色。</p>
+        <ol class="steps">
+          <li>提供圍巾、帽子、包包、舊衣。</li>
+          <li>孩子挑選打扮成醫生、廚師、超人。</li>
+          <li>用那個角色的口吻說話、走路。</li>
+        </ol>
+        <div class="skills"><span class="skill s-social">社交情緒</span><span class="skill s-lang">語言表達</span><span class="skill s-gross">大動作</span></div>
+        <div class="variation"><b>變化：</b>拍張「角色照」做成長紀錄；全家一起變裝開派對。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>開商店買賣<span class="en">Pretend Shop</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 玩具＋瓶蓋</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">扮老闆與客人，玩出語言、數數與輪流。</p>
+        <ol class="steps">
+          <li>把玩具、零食排成「商店」，貼上 1～3 元價格。</li>
+          <li>瓶蓋當錢幣，孩子當老闆收錢、找錢。</li>
+          <li>大人當客人：「我要買這個，多少錢？」</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>角色互換當客人；用真硬幣認識 1 元、5 元、10 元。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>冷靜深呼吸練習<span class="en">Calm-Down Breathing</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 5 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">情緒大時的「煞車」技巧，平常先一起練。</p>
+        <ol class="steps">
+          <li>「聞聞花香」用鼻子慢慢吸氣。</li>
+          <li>「吹吹蠟燭」用嘴巴慢慢吐氣。</li>
+          <li>重複 3 次，再抱一抱，情緒就降下來了。</li>
+        </ol>
+        <div class="skills"><span class="skill s-social">社交情緒</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>手指當蠟燭、吐氣把它「吹熄」；搭配〈感官瓶〉一起做更有效。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- I. 科學小實驗                                    -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="science" class="sec-science">
+    <div class="sec-head">
+      <span class="emoji">🔬</span>
+      <div>
+        <h2>I. 科學小實驗<span class="en">Mini Science</span></h2>
+        <p class="sub">猜一猜、試一試・用廚房材料玩出好奇心與觀察力</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>浮起來還是沉下去<span class="en">Sink or Float</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 水盆＋小物</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">先預測再驗證，科學思維的起點。</p>
+        <ol class="steps">
+          <li>一盆水，蒐集湯匙、積木、葉子、瓶蓋。</li>
+          <li>丟之前先猜：「它會浮還是會沉？」</li>
+          <li>丟下去驗證，分成「浮／沉」兩堆。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>把會沉的東西想辦法「讓它浮起來」（放進碗裡）。</div>
+        <div class="tip"><b>安全：</b>玩水不離視線。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>顏色混一混<span class="en">Color Mixing</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 色素＋水杯</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">親眼看見兩色變新色，超有魔法感。</p>
+        <ol class="steps">
+          <li>三杯水分別滴紅、黃、藍色素。</li>
+          <li>用湯匙把兩色混進第四個杯子。</li>
+          <li>紅＋黃＝橘、藍＋黃＝綠，邊混邊喊出來。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>用棉花棒沾色在白紙上混；裝冰棒模做「彩虹冰」。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>小蘇打火山<span class="en">Baking Soda Volcano</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 小蘇打＋醋</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">會冒泡的反應，孩子尖叫指數最高。</p>
+        <ol class="steps">
+          <li>杯子裝 2 匙小蘇打，加一點洗碗精＋色素。</li>
+          <li>倒入白醋。</li>
+          <li>看它「噗滋噗滋」冒泡噴發。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>用黏土堆火山外型；比較「多加一點醋」泡泡有沒有更多。</div>
+        <div class="tip"><b>安全：</b>醋勿入眼，玩完洗手。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>影子變變變<span class="en">Shadow Play</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 手電筒</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">光與影的探索，晚上玩最好玩。</p>
+        <ol class="steps">
+          <li>關燈，用手電筒照牆壁。</li>
+          <li>用手比出小狗、兔子、蝴蝶的影子。</li>
+          <li>手移近移遠，看影子變大變小。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>用玩具排「影子劇場」演故事；白天到戶外找影子踩一踩。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>磁鐵吸吸樂<span class="en">Magnet Hunt</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 磁鐵</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">哪些東西會被吸？分類大發現。</p>
+        <ol class="steps">
+          <li>給一塊磁鐵（冰箱貼也行）。</li>
+          <li>在家裡找東西試「吸得住嗎？」</li>
+          <li>分成「會吸／不會吸」兩堆，找出規律。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>隔著紙板移動磁鐵，讓上面的迴紋針「跟著走」。</div>
+        <div class="tip"><b>安全：</b>小顆磁鐵誤食極危險，務必用大塊磁鐵並全程看顧。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>種子發芽日記<span class="en">Bean Sprouting</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 每天 5 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 綠豆＋棉花</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">等待加觀察，學會照顧與耐心。</p>
+        <ol class="steps">
+          <li>透明杯鋪濕棉花，放幾顆綠豆。</li>
+          <li>每天噴點水、放窗邊曬太陽。</li>
+          <li>觀察「發芽 → 長根 → 冒葉」並畫下來。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>做「生長記錄表」每天貼一格；比較「有澆水 vs 沒澆水」的差別。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>靜電魔法<span class="en">Static Magic</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 氣球＋碎紙</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">氣球摩擦頭髮，就能「隔空」吸東西。</p>
+        <ol class="steps">
+          <li>把氣球在頭髮或毛衣上用力摩擦十幾下。</li>
+          <li>靠近小碎紙、胡椒粉、頭髮。</li>
+          <li>看它們被「吸」起來、頭髮立起來。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>比賽「摩擦幾下吸力最強」；讓細水流被氣球「吸彎」。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>牛奶煙火<span class="en">Milk Fireworks</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 牛奶＋色素</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">一根棉花棒，讓顏色在牛奶上炸開來。</p>
+        <ol class="steps">
+          <li>盤子倒一層牛奶，滴幾滴不同色素。</li>
+          <li>棉花棒沾一點洗碗精。</li>
+          <li>輕碰牛奶表面，看顏色瞬間「炸開」流動。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>換全脂/低脂牛奶比較效果；多點幾處色素同時炸。</div>
+        <div class="tip"><b>安全：</b>玩過的牛奶不要喝，玩完洗手。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- J. 台灣經典童玩・團體遊戲                         -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="taiwan" class="sec-tw">
+    <div class="sec-head">
+      <span class="emoji">🇹🇼</span>
+      <div>
+        <h2>J. 台灣經典童玩・團體遊戲<span class="en">Taiwan Classics</span></h2>
+        <p class="sub">阿公阿嬤那年代玩到大的・大多零材料・最適合一群孩子一起放電</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>老鷹捉小雞<span class="en">Eagle Catches Chicks</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10–15 分</span><span class="chip">👥 5 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">台灣世代相傳的追逐遊戲，一群人合作躲老鷹。</p>
+        <ol class="steps">
+          <li>一人當「老鷹」、一人當「母雞」，其餘當「小雞」一個接一個抓住前面人的衣服。</li>
+          <li>老鷹要繞過母雞，抓到隊伍最後面的小雞。</li>
+          <li>母雞張開雙臂左右擋，小雞跟著母雞甩動閃躲，被抓到就出局。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>人少時大人當母雞、孩子當小雞貼著跑；被抓到的改當下一隻老鷹。</div>
+        <div class="tip"><b>安全：</b>場地清空、地面防滑，提醒別硬扯衣服。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>大風吹<span class="en">The Big Wind Blows</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 5 人+</span><span class="chip">📦 椅子</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">換位搶椅子的反應遊戲，台灣校園必玩。</p>
+        <ol class="steps">
+          <li>椅子圍成圈，數量比人少一張，一人當鬼站中間。</li>
+          <li>鬼喊「大風吹！」大家問「吹什麼？」鬼說一個特徵，例如「吹穿紅色的人」。</li>
+          <li>符合的人全部起身換位，鬼趁亂搶位，沒位子的人當下一個鬼。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>3–4 歲用明顯特徵（戴髮夾、穿裙子）；喊「龍捲風」時全部都要換位。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>蘿蔔蹲<span class="en">Radish Squat</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 4 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">邊唸邊蹲的口令反應遊戲，超考專注。</p>
+        <ol class="steps">
+          <li>每人代表一種顏色的蘿蔔（紅、白、黃…）。</li>
+          <li>邊蹲邊唸「紅蘿蔔蹲、紅蘿蔔蹲、紅蘿蔔蹲完白蘿蔔蹲」。</li>
+          <li>被點到的「白蘿蔔」要馬上接著蹲並指定下一個，接不上就出局。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-gross">大動作</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>放慢速度給小小孩；改用動物或水果名稱玩。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>丟手帕<span class="en">Drop the Handkerchief</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 6 人+</span><span class="chip">📦 手帕</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">圍圈坐、偷偷放手帕的經典遊戲。</p>
+        <ol class="steps">
+          <li>大家圍成圈蹲坐，一人拿手帕在圈外繞圈走。</li>
+          <li>趁人不注意把手帕悄悄放在某人背後。</li>
+          <li>被放的人發現後拿起手帕起身追，放的人要搶坐到空位。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>唱〈丟手絹〉歌增加氣氛；沒發現被繞回來就表演一個小節目。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>城門城門雞蛋糕<span class="en">The City-Gate Rhyme</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 4 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">兩人搭城門、大家鑽過去的唸謠遊戲。</p>
+        <ol class="steps">
+          <li>兩人面對面手牽手高舉，搭成「城門」。</li>
+          <li>其他人排隊從門下鑽過，一起唸「城門城門雞蛋糕，三十六把刀，騎白馬、帶把刀，走進城門滑一跤」。</li>
+          <li>唸到最後一字城門落下，被罩住的人換上去當門。</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>唸謠邊拍手；門落下改成輕輕罩住，不嚇到小小孩。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>踢毽子<span class="en">Jianzi · Shuttlecock</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 毽子(可自製)</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">用腳踢毽子不落地，台灣傳統技藝。</p>
+        <ol class="steps">
+          <li>沒有毽子可用塑膠袋包一點米、綁上幾條緞帶自製。</li>
+          <li>先用手丟、用腳背或腳內側輕輕踢起。</li>
+          <li>數數能連續踢幾下不落地。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>3–4 歲改「手丟、腳踢一下再接住」；或踢大氣球當入門版。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>剪刀石頭布・黑白配<span class="en">Rock-Paper-Scissors</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 5 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">決定順序與分組的萬用小遊戲。</p>
+        <ol class="steps">
+          <li>「剪刀、石頭、布」出拳定勝負（剪刀贏布、布贏石頭、石頭贏剪刀）。</li>
+          <li>多人用「黑白配」：一起喊著翻手心或手背，同一面的一組。</li>
+          <li>用它來決定誰當鬼、誰先玩。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>先教三個手勢與輸贏關係；玩「猜拳爬樓梯」一階一階決勝負。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>炒蘿蔔切切切<span class="en">Hand-Clapping Rhyme</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 5 分</span><span class="chip">👥 2 人</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">兩人手拉手的台灣親子手指謠。</p>
+        <ol class="steps">
+          <li>面對面雙手互拉。</li>
+          <li>邊唸邊做動作：「炒蘿蔔、炒蘿蔔，切切切！」（互拉手前後拉動再做切的動作）。</li>
+          <li>最後一句「○○○，搔癢癢！」輕輕搔對方，笑成一團。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-social">社交情緒</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>加「包餃子、包餃子，捏捏捏」延長；換成搔不同部位增加期待。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- K. 各國民俗團體遊戲                               -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="world" class="sec-world">
+    <div class="sec-head">
+      <span class="emoji">🌍</span>
+      <div>
+        <h2>K. 各國民俗團體遊戲<span class="en">Games Around the World</span></h2>
+        <p class="sub">日・韓・英美的經典童年遊戲・玩遊戲也認識世界</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>鴨鴨鵝 🇺🇸🇬🇧<span class="en">Duck, Duck, Goose</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 5 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">歐美幼兒園最經典的圍圈追逐遊戲。</p>
+        <ol class="steps">
+          <li>大家圍圈坐好，一人當鬼繞圈走，輕拍每個人的頭說「鴨（Duck）」。</li>
+          <li>突然拍一個人說「鵝（Goose）！」。</li>
+          <li>被拍到的「鵝」立刻起身追鬼，鬼要繞一圈搶坐到鵝的空位。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>直接喊英文 duck / goose，順便學單字；圈小一點給小小孩。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>玫瑰花圈圈 🇬🇧<span class="en">Ring a Ring o' Roses</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 5–10 分</span><span class="chip">👥 3 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">牽手轉圈、唱到最後一起跌坐，幼兒最愛。</p>
+        <ol class="steps">
+          <li>大家手牽手圍成圈，一邊轉圈一邊唱。</li>
+          <li>唱「Ring-a-ring o' roses…」（轉呀轉的玫瑰花圈）。</li>
+          <li>唱到「…we all fall down！」全部一起蹲下或坐倒。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>中文亂編也行，重點是「最後一起倒下」的期待感；結尾換成一起跳起來。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>搶椅子 🇯🇵🌍<span class="en">Musical Chairs</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10–15 分</span><span class="chip">👥 4 人+</span><span class="chip">📦 椅子＋音樂</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">音樂一停就搶位子，全世界都在玩（日本叫椅子取り）。</p>
+        <ol class="steps">
+          <li>椅子背對背排一排，數量比人少一張。</li>
+          <li>放音樂，大家繞著椅子走。</li>
+          <li>音樂一停立刻搶坐，沒搶到的出局，再抽掉一張椅子繼續。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>怕競爭太激烈改「合作版」：椅子變少但大家想辦法一起擠上去，不淘汰人。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>燙手山芋 🇺🇸<span class="en">Hot Potato</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 4 人+</span><span class="chip">📦 小球/玩偶</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">音樂響就快傳，停下來拿著的人出局。</p>
+        <ol class="steps">
+          <li>圍圈坐，拿一個小球當「燙手的山芋」。</li>
+          <li>放音樂，球要快速一個傳一個。</li>
+          <li>音樂一停，手上還拿著球的人「燙到」，做一個動作或暫停一輪。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>不淘汰版——停下來的人說一個顏色或動物就繼續，氣氛更輕鬆。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>看這邊！🇯🇵<span class="en">Acchi Muite Hoi</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 5 分</span><span class="chip">👥 2 人</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">日本超紅的猜拳反應遊戲。</p>
+        <ol class="steps">
+          <li>先剪刀石頭布，贏的人當「出題者」。</li>
+          <li>出題者喊「看這邊！」同時用手指比上、下、左、右一個方向。</li>
+          <li>輸的人要把臉轉開，若剛好和手指同方向就輸；沒同方向就再猜拳繼續。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-gross">大動作</span></div>
+        <div class="variation"><b>變化：</b>日文原版喊「あっち向いてホイ」；放慢動作給小小孩反應。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>福笑臉 🇯🇵<span class="en">Fukuwarai</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 紙＋筆</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">日本新年遊戲，蒙眼拼出一張臉，超爆笑。</p>
+        <ol class="steps">
+          <li>畫一張空白的臉輪廓，另外剪好眼睛、鼻子、嘴巴。</li>
+          <li>蒙眼（或閉眼）的人聽大家指揮「往上、左邊一點」把五官放上去。</li>
+          <li>睜開眼看歪七扭八的成果，一起大笑。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-lang">語言表達</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>不蒙眼版給小小孩；五官貼磁鐵，在冰箱上玩。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>木槿花開了 🇰🇷<span class="en">Mugunghwa</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 3 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">韓國版「123 木頭人」，鬼背對唸完一句才回頭。</p>
+        <ol class="steps">
+          <li>鬼面對牆背對大家，喊「무궁화꽃이 피었습니다（木槿花開了）」。</li>
+          <li>喊的時候大家前進，鬼一唸完回頭，所有人立刻定格不動。</li>
+          <li>被抓到動的人出局，先摸到鬼的人贏。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>和台灣〈123 木頭人〉是同一家族，可比較兩國唸法；唸快唸慢增加變化。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>捉迷藏 🌍<span class="en">Hide and Seek</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">幾乎每個國家都有的躲藏遊戲。</p>
+        <ol class="steps">
+          <li>鬼遮眼從 1 數到 10（或 20），其他人趁機躲起來。</li>
+          <li>數完喊「來囉！」開始找。</li>
+          <li>找到所有人就換下一個當鬼。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>3 歲怕找不到 → 大人陪躲、躲明顯處、邊找邊出聲「我來囉～」給安全感。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- L. 經典動腦益智                                   -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="brain" class="sec-brain">
+    <div class="sec-head">
+      <span class="emoji">🧩</span>
+      <div>
+        <h2>L. 經典動腦益智<span class="en">Classic Brain Games</span></h2>
+        <p class="sub">流傳百年的益智遊戲・練空間、策略、記憶與手指・偏 4.5–6 歲</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>七巧板<span class="en">Tangram</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 七巧板(可自製)</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">七片拼出千變萬化，玩出空間概念。</p>
+        <ol class="steps">
+          <li>用厚紙剪出一套七巧板（網路找版型描下來剪）。</li>
+          <li>給一個簡單目標圖（房子、貓、船的輪廓）。</li>
+          <li>用七片拼滿輪廓，轉一轉、翻一翻找位置。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>3–4 歲先玩「自由拼出想像的圖」不限輪廓；比賽誰先拼好。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>井字遊戲<span class="en">Tic-Tac-Toe</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 5 分</span><span class="chip">👥 2 人</span><span class="chip">📦 紙＋筆</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">畫圈叉連成一線，最入門的策略遊戲。</p>
+        <ol class="steps">
+          <li>畫一個井字 3×3 格。</li>
+          <li>一人畫 O、一人畫 X，輪流在空格畫。</li>
+          <li>先把自己的三個連成一直線、橫線或斜線就贏。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>5 歲開始懂得「擋住對方」；改用兩色積木放格子代替畫筆。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>翻花繩<span class="en">Cat's Cradle</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1–2 人</span><span class="chip">📦 一條繩</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">一條繩在手指間變花樣，台日韓都在玩。</p>
+        <ol class="steps">
+          <li>一條約 1 公尺的繩子打結成圈。</li>
+          <li>套在雙手手指上，撐開成基本形。</li>
+          <li>兩人輪流用手指「挑、勾、翻」接出新花樣。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>3–4 歲先玩「繩子在桌上排圖案」（圓形、三角形）；大人示範一步、孩子跟一步。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>抓石子<span class="en">Jacks · 공기 · おはじき</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 小石子/豆袋</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">撒子、拋接、抓取的傳統手部遊戲（台灣叫抓子兒）。</p>
+        <ol class="steps">
+          <li>準備 5 顆小石子或小豆袋。</li>
+          <li>撒在地上，拿起一顆往上拋。</li>
+          <li>趁它在空中，快手抓起地上一顆，再接住落下的那顆。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>3–4 歲先練「拋一顆、拍一下手再接住」；用較大的豆袋好抓不易滾。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>記憶接龍<span class="en">Memory Chain</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">「我去市場買了…」越接越長，考記憶力。</p>
+        <ol class="steps">
+          <li>第一個人說「我去市場買了蘋果」。</li>
+          <li>下一個人重複並加一樣：「蘋果、香蕉」。</li>
+          <li>輪流接，每次都要把前面全部唸對再加新的。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>3 歲先 2–3 樣就好；用實物或圖卡擺出來輔助記憶。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>終極密碼<span class="en">Guess the Number</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">用「比大比小」線索猜出神祕數字。</p>
+        <ol class="steps">
+          <li>出題者心裡想一個 1～10 的數字。</li>
+          <li>孩子猜，出題者只回「太大了／太小了」。</li>
+          <li>一步步縮小範圍，猜中就換他出題。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>3–4 歲縮小到 1～5、用手指比；改成「猜躲在哪個杯子下」的具體版。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- 📖 經典遊戲深入解析（規則 × 各國名稱）           -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="deep" class="deep-sec">
+    <div class="sec-head">
+      <span class="emoji">📖</span>
+      <div>
+        <h2>經典遊戲深入解析<span class="en">In-Depth Rules &amp; Names</span></h2>
+        <p class="sub">12 個跨國經典・附各國名稱（原文＋拼音）＋完整規則、口訣、勝負、變體</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🚦 木頭人家族<span class="den">Red Light, Green Light</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼 一二三木頭人／紅綠燈</span>
+        <span class="nm">🇯🇵 だるまさんが転んだ <i>daruma-san ga koronda</i></span>
+        <span class="nm">🇰🇷 무궁화꽃이 피었습니다 <i>mugunghwa-kkochi pieotseumnida</i></span>
+        <span class="nm">🇬🇧 Grandmother's Footsteps</span>
+        <span class="nm">🇺🇸 Red Light, Green Light / Statues</span>
+        <span class="nm">🇫🇷 1, 2, 3, Soleil!</span>
+        <span class="nm">🇪🇸 Un, dos, tres, escondite inglés</span>
+      </div>
+      <div class="deep-meta">👥 3 人+ ・ 📦 不用 ・ 🏠 室內外皆可 ・ ⭐ ☆☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>一人當「鬼」面對牆背對大家，其餘站在約 8–10 公尺外的起點線。</li>
+          <li>鬼大聲唸固定口號，唸的時候大家盡量往前走或跑。</li>
+          <li>鬼一唸完立刻回頭，看到誰還在動，就把他抓出局（或退回起點）。</li>
+          <li>趁鬼背對時前進、回頭時立刻定格；最先摸到鬼（或牆）的人獲勝，換他當鬼。</li>
+        </ol>
+        <h5>各國口訣（唸完才回頭）</h5>
+        <div class="chant">🇹🇼「一、二、三，木頭人！」　🇯🇵「だるまさんがころんだ」（10 音）　🇰🇷「무궁화꽃이 피었습니다」（10 音）　🇬🇧 默念 "Grandmother's footsteps"</div>
+        <h5>變體</h5>
+        <ul><li>進階：鬼回頭後可指定動的人做懲罰動作。</li><li>被抓的人手牽手成一排，隊友碰到可「解救」全部。</li></ul>
+        <h5>適齡・安全</h5>
+        <p>3 歲先不淘汰、單純跟著「走→停」；場地清空避免衝撞。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🐔 老鷹捉小雞<span class="den">Eagle Catches the Chicks</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼🇨🇳 老鷹捉小雞</span>
+        <span class="nm">🇰🇷 꼬리잡기 <i>kkori-japgi</i>（抓尾巴）</span>
+        <span class="nm">🇬🇧 Fox &amp; Chickens / Chain Tag</span>
+        <span class="nm">🇺🇸 Cat and Mouse（近似）</span>
+      </div>
+      <div class="deep-meta">👥 5 人+ ・ 📦 不用 ・ 🏠 大空間 ・ ⭐ ☆☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>猜拳選出「老鷹」與「母雞」，其餘當「小雞」，一個接一個抓住前面人的腰或衣服，排成長串接在母雞後面。</li>
+          <li>老鷹站母雞前方，目標是抓到隊伍「最尾端」的小雞。</li>
+          <li>母雞張開雙臂左右移動阻擋，整條小雞龍跟著母雞同方向甩動閃避，不能放手斷掉。</li>
+          <li>老鷹碰到尾端小雞即抓到，該小雞出局（或當下一隻老鷹）；隊伍斷裂算母雞失職。</li>
+        </ol>
+        <h5>變體</h5>
+        <ul><li>韓國〈꼬리잡기〉抓的是塞在最後一人褲後的布尾巴。</li><li>多隊互抓對方尾巴的混戰版。</li></ul>
+        <h5>適齡・安全</h5>
+        <p>奔跑強度高，地面防滑、提醒抓衣別硬扯；小小孩減少人數並放慢速度。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🏃 鬼抓人<span class="den">Tag</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼 鬼抓人／當鬼</span>
+        <span class="nm">🇯🇵 鬼ごっこ <i>onigokko</i></span>
+        <span class="nm">🇰🇷 술래잡기 <i>sullae-japgi</i></span>
+        <span class="nm">🇬🇧🇺🇸 Tag（鬼叫 "It"）</span>
+        <span class="nm">🇮🇹 acchiapparella</span>
+        <span class="nm">🇫🇷 jouer à chat</span>
+        <span class="nm">🇩🇪 Fangen</span>
+        <span class="nm">🇪🇸 pilla-pilla</span>
+      </div>
+      <div class="deep-meta">👥 3 人+ ・ 📦 不用 ・ 🏠 開闊空間 ・ ⭐ ☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>猜拳選一人當「鬼」（it）。</li>
+          <li>鬼追其他人，碰到誰、誰就變成新的鬼。</li>
+          <li>新鬼追別人（通常規定不能立刻反追剛碰你的人）。</li>
+        </ol>
+        <h5>變體</h5>
+        <ul>
+          <li><b>冰凍鬼</b>（freeze tag）：被碰到要定住，隊友從胯下鑽過可解凍。</li>
+          <li><b>高低鬼</b>：站高處或蹲下時有安全免疫。</li>
+          <li><b>影子鬼</b>：踩到影子也算抓到。</li>
+        </ul>
+        <h5>適齡・安全</h5>
+        <p>先劃定範圍避免跑遠；3 歲版大人放慢當鬼，製造「快被追到」的緊張感。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🙈 捉迷藏<span class="den">Hide and Seek</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼 捉迷藏／躲貓貓</span>
+        <span class="nm">🇯🇵 かくれんぼ <i>kakurenbo</i></span>
+        <span class="nm">🇰🇷 숨바꼭질 <i>sumba-kkokjil</i></span>
+        <span class="nm">🇬🇧🇺🇸 Hide and Seek</span>
+        <span class="nm">🇮🇹 nascondino</span>
+        <span class="nm">🇫🇷 cache-cache</span>
+        <span class="nm">🇪🇸 escondite</span>
+        <span class="nm">🇩🇪 Versteckspiel</span>
+      </div>
+      <div class="deep-meta">👥 2 人+ ・ 📦 不用 ・ 🏠 室內外 ・ ⭐ ☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>一人當鬼，遮眼面壁從 1 數到 10 或 20，其他人趁機躲起來。</li>
+          <li>數完喊「來囉！」（英 "Ready or not, here I come!"）開始尋找。</li>
+          <li>找到所有人即結束，第一個（或最後一個）被找到的人當下一個鬼。</li>
+        </ol>
+        <h5>變體</h5>
+        <ul><li><b>沙丁魚</b>（Sardines）：反過來「一人躲、大家找」，找到的人要偷偷擠進同一藏身處，最後一個找到的人當鬼。</li></ul>
+        <h5>適齡・安全</h5>
+        <p>3 歲怕黑/怕找不到 → 大人陪躲、躲明顯處、邊找邊出聲給安全感；先講好不可躲危險處（冰箱、洗衣機、陽台）。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🦶 跳房子<span class="den">Hopscotch</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼 跳房子／跳格子</span>
+        <span class="nm">🇯🇵 けんけんぱ <i>ken-ken-pa</i></span>
+        <span class="nm">🇰🇷 사방치기 <i>sabang-chigi</i></span>
+        <span class="nm">🇬🇧🇺🇸 Hopscotch</span>
+        <span class="nm">🇫🇷 marelle</span>
+        <span class="nm">🇮🇹 campana（鐘）</span>
+        <span class="nm">🇪🇸 rayuela</span>
+        <span class="nm">🇩🇪 Himmel und Hölle（天堂與地獄）</span>
+      </div>
+      <div class="deep-meta">👥 1 人+ ・ 📦 粉筆/膠帶＋小石或沙包 ・ 🏠 地面 ・ ⭐ ☆☆☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>地上畫 1～8（或 1～10）的格子：單格單腳落地、並排雙格雙腳同時落地。</li>
+          <li>把小石頭丟進第 1 格，跳時要「跳過」那一格，其餘照單／雙腳規則跳到底再折返。</li>
+          <li>回程跳到丟石格前一格，彎腰撿起石頭，再跳回起點，成功就換丟下一格。</li>
+          <li>踩線、丟錯格、該單腳卻雙腳落地＝失誤，換下一人；輪到你時從失誤的那格繼續。</li>
+        </ol>
+        <h5>各國差異</h5>
+        <div class="chant">格子形狀各國不同：日本「ぱ」是雙腳張開落地；法/義常畫成蝸牛或鐘形；終點格常叫「天堂」可轉身背對丟石。</div>
+        <h5>適齡・安全</h5>
+        <p>3–4 歲先免丟石、單純把單／雙腳跳完即可；室內用膠帶貼格、地面防滑。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🪑 大風吹<span class="den">Fruit Basket / Big Wind Blows</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼 大風吹</span>
+        <span class="nm">🇯🇵 フルーツバスケット <i>fruit basket</i></span>
+        <span class="nm">🇬🇧 Fruit Salad / All Change</span>
+      </div>
+      <div class="deep-meta">👥 5 人+ ・ 📦 椅子（比人少 1 張）・ 🏠 室內 ・ ⭐ ☆☆☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>椅子圍圈，每人坐一張，一人當鬼站中間（椅子比人少一張）。</li>
+          <li>鬼喊「大風吹！」眾人問「吹什麼？」鬼說一個共同特徵，如「吹穿襪子的人」。</li>
+          <li>符合特徵者全部離座、換到別張空椅（不能坐回原位或隔壁），鬼趁亂搶一張。</li>
+          <li>沒搶到椅子的人當下一個鬼。</li>
+        </ol>
+        <h5>日本 fruit basket 版</h5>
+        <div class="chant">先給每人分配一種水果名（蘋果/香蕉/橘子）；鬼喊水果名，被喊到的同學換位；喊「フルーツバスケット！」則全部人都要換位。</div>
+        <h5>變體・安全</h5>
+        <p>喊「龍捲風」全部都要換位。3–4 歲用明顯特徵；椅子排穩、提醒慢慢走不推擠。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🧣 丟手帕家族<span class="den">Drop the Handkerchief / Duck Duck Goose</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼 丟手帕／丟手絹</span>
+        <span class="nm">🇯🇵 ハンカチ落とし <i>hankachi-otoshi</i></span>
+        <span class="nm">🇰🇷 수건돌리기 <i>sugeon-dolligi</i></span>
+        <span class="nm">🇬🇧 Drop the Handkerchief</span>
+        <span class="nm">🇺🇸 Duck, Duck, Goose</span>
+      </div>
+      <div class="deep-meta">👥 6 人+ ・ 📦 手帕（鴨鴨鵝版不用）・ 🏠 室內外 ・ ⭐ ☆☆</div>
+      <div class="deep-body">
+        <h5>玩法（丟手帕版）</h5>
+        <ol>
+          <li>大家圍圈蹲坐朝內，一人拿手帕在圈外繞圈走。</li>
+          <li>偷偷把手帕放在某人背後，盡量不被發現。</li>
+          <li>被放的人要及時發現、拿起手帕起身追，放的人繞一圈搶坐那個空位。</li>
+          <li>沒發現而被繞回拍到，要進圈中表演節目，再換他當繞圈人。</li>
+        </ol>
+        <h5>鴨鴨鵝版（美國）</h5>
+        <div class="chant">繞圈輕拍每人的頭唸「鴨、鴨…鵝（Duck, Duck, Goose）！」，被點到「鵝」的人立刻起身反追，追不到就換當繞圈人。</div>
+        <h5>適齡・安全</h5>
+        <p>蹲坐久可改盤坐；3 歲圈小一點、節奏放慢。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">✊ 剪刀石頭布<span class="den">Rock-Paper-Scissors</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼 剪刀石頭布</span>
+        <span class="nm">🇯🇵 じゃんけんぽん <i>janken-pon</i></span>
+        <span class="nm">🇰🇷 가위바위보 <i>gawi-bawi-bo</i></span>
+        <span class="nm">🇬🇧🇺🇸 Rock, Paper, Scissors</span>
+        <span class="nm">🇫🇷 pierre-feuille-ciseaux</span>
+        <span class="nm">🇩🇪 Schere, Stein, Papier</span>
+        <span class="nm">🇪🇸 piedra, papel, tijera</span>
+      </div>
+      <div class="deep-meta">👥 2 人+ ・ 📦 不用 ・ ⭐ ☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>兩人同時喊口號出拳：✌️剪刀、✊石頭、🖐️布。</li>
+          <li>勝負：剪刀贏布、布贏石頭、石頭贏剪刀；相同則平手重出。</li>
+          <li>用來決定先後順序、分組（多人用「黑白配」翻手心手背分隊）。</li>
+        </ol>
+        <h5>延伸</h5>
+        <ul><li>日本〈あっち向いてホイ（看這邊）〉：贏的人指方向，輸的人臉若轉到同方向就輸。</li><li>猜拳爬樓梯：贏一次往上爬一階，先到頂的人贏。</li></ul>
+        <h5>適齡</h5>
+        <p>3–4 歲先教三個手勢與「誰贏誰」的關係，不強調出拳速度。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🪨 抓石子<span class="den">Jacks / Knucklebones</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼 抓子兒／撿石子</span>
+        <span class="nm">🇰🇷 공기놀이 <i>gonggi-nori</i></span>
+        <span class="nm">🇯🇵 お手玉 <i>otedama</i>（布包版）</span>
+        <span class="nm">🇬🇧🇺🇸 Jacks / Fivestones</span>
+      </div>
+      <div class="deep-meta">👥 1 人+ ・ 📦 5 顆小石或小豆袋 ・ 🏠 平面 ・ ⭐ ☆☆☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>5 顆子撒在地上或桌上。</li>
+          <li>拋一顆往上，趁它落下前抓起地上一顆，再接住落下的那顆（第一關每次抓 1 顆）。</li>
+          <li>過關後升級：第二關每次抓 2 顆、第三關 3 顆…直到一次抓起全部。</li>
+        </ol>
+        <h5>各國變體</h5>
+        <ul><li>韓國〈공기〉最後一關把子拋起、用手背接，接到幾顆算幾分（年）。</li><li>日本〈お手玉〉邊拋接邊唱數數歌。</li></ul>
+        <h5>適齡</h5>
+        <p>3–4 歲先練「拋一顆、拍一下手再接住」；用較大的豆袋好抓、不會滾走。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🪢 翻花繩<span class="den">Cat's Cradle / String Figures</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼 翻花繩／挑繃繃</span>
+        <span class="nm">🇯🇵 あやとり <i>ayatori</i></span>
+        <span class="nm">🇰🇷 실뜨기 <i>siltteugi</i></span>
+        <span class="nm">🇬🇧🇺🇸 Cat's Cradle</span>
+      </div>
+      <div class="deep-meta">👥 1–2 人 ・ 📦 約 1 公尺繩圈 ・ ⭐ ☆☆☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>繩子打結成一個圈，套在雙手手指撐開成基本形（「搖籃」）。</li>
+          <li>兩人玩：對方用手指「挑、勾、翻」把繩接到自己手上，變出新花樣（球門、鑽石、麵條）。</li>
+          <li>輪流接，接壞或纏住就重新開始。</li>
+        </ol>
+        <h5>單人玩</h5>
+        <p>用一條繩變出固定圖形，如埃菲爾鐵塔、五角星、掃把。</p>
+        <h5>適齡</h5>
+        <p>偏 5 歲；3–4 歲先玩「繩子在桌上排圖案」（排圓形、三角形、字母）。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🏸 踢毽子<span class="den">Shuttlecock Kicking</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼🇨🇳 踢毽子</span>
+        <span class="nm">🇰🇷 제기차기 <i>jegi-chagi</i></span>
+        <span class="nm">🇻🇳 đá cầu（已成正式運動）</span>
+        <span class="nm">🇬🇧 Shuttlecock / Jianzi</span>
+      </div>
+      <div class="deep-meta">👥 1 人+ ・ 📦 毽子（可自製）・ 🏠 室內外 ・ ⭐ ☆☆☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>毽子放在腳背上、或用手丟下。</li>
+          <li>用腳內側或腳背把毽子往上踢，不讓它落地。</li>
+          <li>數連續踢幾下；多人可圍圈互相踢傳。</li>
+        </ol>
+        <h5>自製毽子</h5>
+        <p>塑膠袋包一點米或一個墊片，束口處綁上幾條緞帶或塑膠條當羽毛。</p>
+        <h5>適齡・安全</h5>
+        <p>偏 5 歲；3–4 歲改「手丟、腳踢一下再用手接住」，或先踢大氣球。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🧩 七巧板<span class="den">Tangram</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼🇨🇳 七巧板（源自中國）</span>
+        <span class="nm">🌍 Tangram（國際通用名，19 世紀傳入歐美）</span>
+        <span class="nm">🇯🇵 タングラム／知恵の板</span>
+      </div>
+      <div class="deep-meta">👥 1 人+ ・ 📦 七巧板（可用厚紙自製）・ 🏠 桌面 ・ ⭐ ☆☆☆</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>一套 7 片：5 個三角形（2 大、1 中、2 小）、1 個正方形、1 個平行四邊形，合起來可拼成一個大正方形。</li>
+          <li>給一張目標輪廓圖（人、貓、房子、帆船）。</li>
+          <li>用全部 7 片不重疊、不留縫地拼滿該輪廓。</li>
+        </ol>
+        <h5>變體</h5>
+        <ul><li>只給黑色剪影（看不出內部分割線）更難。</li><li>自由創作不限輪廓。</li></ul>
+        <h5>適齡</h5>
+        <p>偏 4.5 歲＋；3–4 歲先自由排出自己想像的圖，不要求填滿輪廓。</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- D. 注音遊戲                                     -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="bpmf" class="sec-bpmf">
+    <div class="sec-head">
+      <span class="emoji">🔤</span>
+      <div>
+        <h2>D. 注音 ㄅㄆㄇ 遊戲<span class="en">Bopomofo Play</span></h2>
+        <p class="sub">用玩的接觸符號・適合 4.5–6 歲・重點是熟悉不是背誦</p>
+      </div>
+    </div>
+
+    <div class="bpmf-intro">
+      <b>給家長：</b>3–4 歲先別急著「教注音」，這頁是讓孩子<b>用玩的方式接觸符號與聲音</b>。每天 5 分鐘、認得幾個就好，連到生活中的字（自己名字、招牌、繪本）比反覆抄寫更有效。下表每個符號配一個好記的詞與圖示。
+    </div>
+
+    <div class="bpmf-label">聲母（21 個・字的開頭音）</div>
+    <div class="bpmf-grid">
+      <div class="bpmf"><div class="sym">ㄅ</div><div class="word">包子</div></div>
+      <div class="bpmf"><div class="sym">ㄆ</div><div class="word">皮球⚽</div></div>
+      <div class="bpmf"><div class="sym">ㄇ</div><div class="word">媽媽</div></div>
+      <div class="bpmf"><div class="sym">ㄈ</div><div class="word">飛機✈️</div></div>
+      <div class="bpmf"><div class="sym">ㄉ</div><div class="word">大象🐘</div></div>
+      <div class="bpmf"><div class="sym">ㄊ</div><div class="word">兔子🐰</div></div>
+      <div class="bpmf"><div class="sym">ㄋ</div><div class="word">牛奶🥛</div></div>
+      <div class="bpmf"><div class="sym">ㄌ</div><div class="word">老虎🐯</div></div>
+      <div class="bpmf"><div class="sym">ㄍ</div><div class="word">狗狗🐶</div></div>
+      <div class="bpmf"><div class="sym">ㄎ</div><div class="word">卡車🚚</div></div>
+      <div class="bpmf"><div class="sym">ㄏ</div><div class="word">花朵🌸</div></div>
+      <div class="bpmf"><div class="sym">ㄐ</div><div class="word">小雞🐤</div></div>
+      <div class="bpmf"><div class="sym">ㄑ</div><div class="word">汽車🚗</div></div>
+      <div class="bpmf"><div class="sym">ㄒ</div><div class="word">西瓜🍉</div></div>
+      <div class="bpmf"><div class="sym">ㄓ</div><div class="word">蜘蛛🕷️</div></div>
+      <div class="bpmf"><div class="sym">ㄔ</div><div class="word">吃飯🍚</div></div>
+      <div class="bpmf"><div class="sym">ㄕ</div><div class="word">獅子🦁</div></div>
+      <div class="bpmf"><div class="sym">ㄖ</div><div class="word">太陽☀️</div></div>
+      <div class="bpmf"><div class="sym">ㄗ</div><div class="word">走路🚶</div></div>
+      <div class="bpmf"><div class="sym">ㄘ</div><div class="word">草地🌱</div></div>
+      <div class="bpmf"><div class="sym">ㄙ</div><div class="word">雨傘☂️</div></div>
+    </div>
+
+    <div class="bpmf-label">韻母與介音（16 個・字的尾音／中間音）</div>
+    <div class="bpmf-grid">
+      <div class="bpmf"><div class="sym">ㄚ</div><div class="word">鴨子🦆</div></div>
+      <div class="bpmf"><div class="sym">ㄛ</div><div class="word">婆婆</div></div>
+      <div class="bpmf"><div class="sym">ㄜ</div><div class="word">鵝🦢</div></div>
+      <div class="bpmf"><div class="sym">ㄝ</div><div class="word">爺爺</div></div>
+      <div class="bpmf"><div class="sym">ㄞ</div><div class="word">愛心❤️</div></div>
+      <div class="bpmf"><div class="sym">ㄟ</div><div class="word">飛（ㄈㄟ）</div></div>
+      <div class="bpmf"><div class="sym">ㄠ</div><div class="word">貓咪🐱</div></div>
+      <div class="bpmf"><div class="sym">ㄡ</div><div class="word">海鷗🕊️</div></div>
+      <div class="bpmf"><div class="sym">ㄢ</div><div class="word">安全</div></div>
+      <div class="bpmf"><div class="sym">ㄣ</div><div class="word">門（ㄇㄣ）</div></div>
+      <div class="bpmf"><div class="sym">ㄤ</div><div class="word">糖果🍬</div></div>
+      <div class="bpmf"><div class="sym">ㄥ</div><div class="word">電燈💡</div></div>
+      <div class="bpmf"><div class="sym">ㄦ</div><div class="word">耳朵👂</div></div>
+      <div class="bpmf"><div class="sym">一</div><div class="word">衣服👕</div></div>
+      <div class="bpmf"><div class="sym">ㄨ</div><div class="word">烏龜🐢</div></div>
+      <div class="bpmf"><div class="sym">ㄩ</div><div class="word">魚🐟</div></div>
+    </div>
+
+    <div class="bpmf-games">
+      <h4>🎲 4 個注音小遊戲（不用紙筆抄寫）</h4>
+      <ol>
+        <li><b>注音尋寶：</b>把幾張寫好的注音卡藏在家裡，喊「找出 ㄇ ！」孩子四處找回來，認得就收下。</li>
+        <li><b>身體變注音：</b>用手臂、身體擺出符號的形狀（如雙手張開比「ㄈ」），互相猜是哪個音。</li>
+        <li><b>名字開頭音：</b>「你叫小明，是 ㄒ 開頭喔！」一起找全家人、玩偶名字的第一個音。</li>
+        <li><b>接接看：</b>你說一個音「ㄅ」，孩子要找出一樣開頭的東西（包子、杯子、被子），反過來換他考你。</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ════ CUT-OUT 注音卡 ════ -->
+  <section id="cut" class="cut-sec sec-bpmf">
+    <div class="sec-head">
+      <span class="emoji">✂️</span>
+      <div>
+        <h2>注音卡・剪下版<span class="en">Cut-out Cards</span></h2>
+        <p class="sub">沿虛線剪下 37 張・供「注音尋寶」「符號配圖」「排出名字」等遊戲使用</p>
+      </div>
+    </div>
+    <p class="cut-note">💡 建議列印在稍厚的紙（或印出後貼厚紙板），剪下後更耐玩。背面可寫上同一個音，做成記憶配對卡。</p>
+    <div class="cut-grid">
+      <div class="cut-card"><div class="csym">ㄅ</div><div class="cword">包子</div></div>
+      <div class="cut-card"><div class="csym">ㄆ</div><div class="cword">皮球</div></div>
+      <div class="cut-card"><div class="csym">ㄇ</div><div class="cword">媽媽</div></div>
+      <div class="cut-card"><div class="csym">ㄈ</div><div class="cword">飛機</div></div>
+      <div class="cut-card"><div class="csym">ㄉ</div><div class="cword">大象</div></div>
+      <div class="cut-card"><div class="csym">ㄊ</div><div class="cword">兔子</div></div>
+      <div class="cut-card"><div class="csym">ㄋ</div><div class="cword">牛奶</div></div>
+      <div class="cut-card"><div class="csym">ㄌ</div><div class="cword">老虎</div></div>
+      <div class="cut-card"><div class="csym">ㄍ</div><div class="cword">狗狗</div></div>
+      <div class="cut-card"><div class="csym">ㄎ</div><div class="cword">卡車</div></div>
+      <div class="cut-card"><div class="csym">ㄏ</div><div class="cword">花朵</div></div>
+      <div class="cut-card"><div class="csym">ㄐ</div><div class="cword">小雞</div></div>
+      <div class="cut-card"><div class="csym">ㄑ</div><div class="cword">汽車</div></div>
+      <div class="cut-card"><div class="csym">ㄒ</div><div class="cword">西瓜</div></div>
+      <div class="cut-card"><div class="csym">ㄓ</div><div class="cword">蜘蛛</div></div>
+      <div class="cut-card"><div class="csym">ㄔ</div><div class="cword">吃飯</div></div>
+      <div class="cut-card"><div class="csym">ㄕ</div><div class="cword">獅子</div></div>
+      <div class="cut-card"><div class="csym">ㄖ</div><div class="cword">太陽</div></div>
+      <div class="cut-card"><div class="csym">ㄗ</div><div class="cword">走路</div></div>
+      <div class="cut-card"><div class="csym">ㄘ</div><div class="cword">草地</div></div>
+      <div class="cut-card"><div class="csym">ㄙ</div><div class="cword">雨傘</div></div>
+      <div class="cut-card"><div class="csym">ㄚ</div><div class="cword">鴨子</div></div>
+      <div class="cut-card"><div class="csym">ㄛ</div><div class="cword">婆婆</div></div>
+      <div class="cut-card"><div class="csym">ㄜ</div><div class="cword">鵝</div></div>
+      <div class="cut-card"><div class="csym">ㄝ</div><div class="cword">爺爺</div></div>
+      <div class="cut-card"><div class="csym">ㄞ</div><div class="cword">愛心</div></div>
+      <div class="cut-card"><div class="csym">ㄟ</div><div class="cword">飛</div></div>
+      <div class="cut-card"><div class="csym">ㄠ</div><div class="cword">貓咪</div></div>
+      <div class="cut-card"><div class="csym">ㄡ</div><div class="cword">海鷗</div></div>
+      <div class="cut-card"><div class="csym">ㄢ</div><div class="cword">安全</div></div>
+      <div class="cut-card"><div class="csym">ㄣ</div><div class="cword">門</div></div>
+      <div class="cut-card"><div class="csym">ㄤ</div><div class="cword">糖果</div></div>
+      <div class="cut-card"><div class="csym">ㄥ</div><div class="cword">電燈</div></div>
+      <div class="cut-card"><div class="csym">ㄦ</div><div class="cword">耳朵</div></div>
+      <div class="cut-card"><div class="csym">一</div><div class="cword">衣服</div></div>
+      <div class="cut-card"><div class="csym">ㄨ</div><div class="cword">烏龜</div></div>
+      <div class="cut-card"><div class="csym">ㄩ</div><div class="cword">魚</div></div>
+    </div>
+  </section>
+
+  <!-- ════ ENGLISH FOR PLAY ════ -->
+  <section id="english" class="en-sec">
+    <div class="sec-head">
+      <span class="emoji">🗣️</span>
+      <div>
+        <h2>陪玩英文句型<span class="en">English for Play</span></h2>
+        <p class="sub">玩的時候順口說英文・孩子在情境中自然吸收・不用刻意上課</p>
+      </div>
+    </div>
+    <div class="phr-grid">
+
+      <div class="phr">
+        <h4>👏 鼓勵與指令 Praise &amp; Instructions</h4>
+        <table>
+          <tr><td class="en">Your turn!</td><td>換你了！</td></tr>
+          <tr><td class="en">My turn!</td><td>換我了！</td></tr>
+          <tr><td class="en">Ready, set, go!</td><td>預備…開始！</td></tr>
+          <tr><td class="en">Good job! / Well done!</td><td>做得好！</td></tr>
+          <tr><td class="en">One more time!</td><td>再一次！</td></tr>
+          <tr><td class="en">Let's clean up!</td><td>來收玩具囉！</td></tr>
+          <tr><td class="en">Be careful!</td><td>小心！</td></tr>
+          <tr><td class="en">High five!</td><td>來擊掌！</td></tr>
+          <tr><td class="en">All done!</td><td>完成囉！</td></tr>
+          <tr><td class="en">Try again!</td><td>再試一次！</td></tr>
+        </table>
+      </div>
+
+      <div class="phr">
+        <h4>🎨 顏色 Colors</h4>
+        <div class="word-row">
+          <span class="wchip"><b>red</b> 紅</span>
+          <span class="wchip"><b>orange</b> 橘</span>
+          <span class="wchip"><b>yellow</b> 黃</span>
+          <span class="wchip"><b>green</b> 綠</span>
+          <span class="wchip"><b>blue</b> 藍</span>
+          <span class="wchip"><b>purple</b> 紫</span>
+          <span class="wchip"><b>pink</b> 粉紅</span>
+          <span class="wchip"><b>brown</b> 棕</span>
+          <span class="wchip"><b>black</b> 黑</span>
+          <span class="wchip"><b>white</b> 白</span>
+        </div>
+        <h4 style="margin-top:14px;">🔢 數字 Numbers</h4>
+        <div class="word-row">
+          <span class="wchip"><b>one</b> 一</span>
+          <span class="wchip"><b>two</b> 二</span>
+          <span class="wchip"><b>three</b> 三</span>
+          <span class="wchip"><b>four</b> 四</span>
+          <span class="wchip"><b>five</b> 五</span>
+          <span class="wchip"><b>six</b> 六</span>
+          <span class="wchip"><b>seven</b> 七</span>
+          <span class="wchip"><b>eight</b> 八</span>
+          <span class="wchip"><b>nine</b> 九</span>
+          <span class="wchip"><b>ten</b> 十</span>
+        </div>
+      </div>
+
+      <div class="phr">
+        <h4>🐶 動物 Animals</h4>
+        <div class="word-row">
+          <span class="wchip"><b>dog</b> 狗</span>
+          <span class="wchip"><b>cat</b> 貓</span>
+          <span class="wchip"><b>bird</b> 鳥</span>
+          <span class="wchip"><b>fish</b> 魚</span>
+          <span class="wchip"><b>duck</b> 鴨</span>
+          <span class="wchip"><b>cow</b> 牛</span>
+          <span class="wchip"><b>bear</b> 熊</span>
+          <span class="wchip"><b>rabbit</b> 兔</span>
+          <span class="wchip"><b>lion</b> 獅</span>
+          <span class="wchip"><b>elephant</b> 象</span>
+        </div>
+        <h4 style="margin-top:14px;">🧍 身體部位 Body</h4>
+        <div class="word-row">
+          <span class="wchip"><b>head</b> 頭</span>
+          <span class="wchip"><b>eyes</b> 眼</span>
+          <span class="wchip"><b>ears</b> 耳</span>
+          <span class="wchip"><b>nose</b> 鼻</span>
+          <span class="wchip"><b>mouth</b> 嘴</span>
+          <span class="wchip"><b>hands</b> 手</span>
+          <span class="wchip"><b>shoulders</b> 肩</span>
+          <span class="wchip"><b>knees</b> 膝</span>
+          <span class="wchip"><b>feet</b> 腳</span>
+          <span class="wchip"><b>toes</b> 腳趾</span>
+        </div>
+      </div>
+
+      <div class="phr">
+        <h4>🏃 動作 Action Words</h4>
+        <div class="word-row">
+          <span class="wchip"><b>jump</b> 跳</span>
+          <span class="wchip"><b>run</b> 跑</span>
+          <span class="wchip"><b>walk</b> 走</span>
+          <span class="wchip"><b>clap</b> 拍手</span>
+          <span class="wchip"><b>dance</b> 跳舞</span>
+          <span class="wchip"><b>stop</b> 停</span>
+          <span class="wchip"><b>sit</b> 坐</span>
+          <span class="wchip"><b>stand</b> 站</span>
+          <span class="wchip"><b>touch</b> 摸</span>
+          <span class="wchip"><b>turn around</b> 轉圈</span>
+        </div>
+        <div class="tip" style="margin-top:14px;"><b>怎麼用：</b>玩〈音樂停〉時喊 <b>"Freeze!"</b>、〈紅綠燈〉喊 <b>"Stop! / Go!"</b>、收玩具說 <b>"Let's clean up!"</b>——把英文塞進已經在玩的遊戲，比背單字卡有效。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ 30-DAY TRACKER ════ -->
+  <section id="track">
+    <div class="sec-head">
+      <span class="emoji">📅</span>
+      <div>
+        <h2 style="color:#b5710a;">30 天每日一遊戲<span class="en">30-Day Challenge</span></h2>
+        <p class="sub">每天玩一個、點一下打勾・橫跨所有類別均衡安排・瀏覽器會自動記住進度</p>
+      </div>
+    </div>
+    <div class="track-grid">
+      <div class="day" data-day="1"><span class="check"></span><div class="dnum">Day 1</div><div class="dgame">我看到了 I Spy</div><div class="dcat">🧠 益智</div></div>
+      <div class="day" data-day="2"><span class="check"></span><div class="dnum">Day 2</div><div class="dgame">撕貼畫</div><div class="dcat">✂️ 手作</div></div>
+      <div class="day" data-day="3"><span class="check"></span><div class="dnum">Day 3</div><div class="dgame">動物走路接力</div><div class="dcat">🤸 體能</div></div>
+      <div class="day" data-day="4"><span class="check"></span><div class="dnum">Day 4</div><div class="dgame">手指謠帶動唱</div><div class="dcat">🎵 音樂</div></div>
+      <div class="day" data-day="5"><span class="check"></span><div class="dnum">Day 5</div><div class="dgame">感官箱挖寶</div><div class="dcat">🖐️ 感官</div></div>
+      <div class="day" data-day="6"><span class="check"></span><div class="dnum">Day 6</div><div class="dgame">夾豆豆搬搬樂</div><div class="dcat">🍴 生活自理</div></div>
+      <div class="day" data-day="7"><span class="check"></span><div class="dnum">Day 7</div><div class="dgame">扮家家酒餐廳</div><div class="dcat">🎭 扮演</div></div>
+      <div class="day" data-day="8"><span class="check"></span><div class="dnum">Day 8</div><div class="dgame">浮起來還是沉下去</div><div class="dcat">🔬 科學</div></div>
+      <div class="day" data-day="9"><span class="check"></span><div class="dnum">Day 9</div><div class="dgame">分類大師</div><div class="dcat">🧠 益智</div></div>
+      <div class="day" data-day="10"><span class="check"></span><div class="dnum">Day 10</div><div class="dgame">鹽麵團黏土</div><div class="dcat">✂️ 手作</div></div>
+      <div class="day" data-day="11"><span class="check"></span><div class="dnum">Day 11</div><div class="dgame">氣球不落地</div><div class="dcat">🤸 體能</div></div>
+      <div class="day" data-day="12"><span class="check"></span><div class="dnum">Day 12</div><div class="dgame">鍋碗瓢盆打擊樂</div><div class="dcat">🎵 音樂</div></div>
+      <div class="day" data-day="13"><span class="check"></span><div class="dnum">Day 13</div><div class="dgame">玩水洗洗樂</div><div class="dcat">🖐️ 感官</div></div>
+      <div class="day" data-day="14"><span class="check"></span><div class="dnum">Day 14</div><div class="dgame">倒水練習</div><div class="dcat">🍴 生活自理</div></div>
+      <div class="day" data-day="15"><span class="check"></span><div class="dnum">Day 15</div><div class="dgame">看醫生遊戲</div><div class="dcat">🎭 扮演</div></div>
+      <div class="day" data-day="16"><span class="check"></span><div class="dnum">Day 16</div><div class="dgame">顏色混一混</div><div class="dcat">🔬 科學</div></div>
+      <div class="day" data-day="17"><span class="check"></span><div class="dnum">Day 17</div><div class="dgame">記憶翻翻樂</div><div class="dcat">🧠 益智</div></div>
+      <div class="day" data-day="18"><span class="check"></span><div class="dnum">Day 18</div><div class="dgame">棉花棒點點畫</div><div class="dcat">✂️ 手作</div></div>
+      <div class="day" data-day="19"><span class="check"></span><div class="dnum">Day 19</div><div class="dgame">地板是岩漿</div><div class="dcat">🤸 體能</div></div>
+      <div class="day" data-day="20"><span class="check"></span><div class="dnum">Day 20</div><div class="dgame">絲巾飄飄舞</div><div class="dcat">🎵 音樂</div></div>
+      <div class="day" data-day="21"><span class="check"></span><div class="dnum">Day 21</div><div class="dgame">赤腳觸覺步道</div><div class="dcat">🖐️ 感官</div></div>
+      <div class="day" data-day="22"><span class="check"></span><div class="dnum">Day 22</div><div class="dgame">摺小毛巾</div><div class="dcat">🍴 生活自理</div></div>
+      <div class="day" data-day="23"><span class="check"></span><div class="dnum">Day 23</div><div class="dgame">襪子玩偶劇場</div><div class="dcat">🎭 扮演</div></div>
+      <div class="day" data-day="24"><span class="check"></span><div class="dnum">Day 24</div><div class="dgame">小蘇打火山</div><div class="dcat">🔬 科學</div></div>
+      <div class="day" data-day="25"><span class="check"></span><div class="dnum">Day 25</div><div class="dgame">故事接龍</div><div class="dcat">🧠 益智</div></div>
+      <div class="day" data-day="26"><span class="check"></span><div class="dnum">Day 26</div><div class="dgame">紙箱百變勞作</div><div class="dcat">✂️ 手作</div></div>
+      <div class="day" data-day="27"><span class="check"></span><div class="dnum">Day 27</div><div class="dgame">膠帶跳房子</div><div class="dcat">🤸 體能</div></div>
+      <div class="day" data-day="28"><span class="check"></span><div class="dnum">Day 28</div><div class="dgame">影子變變變</div><div class="dcat">🔬 科學</div></div>
+      <div class="day" data-day="29"><span class="check"></span><div class="dnum">Day 29</div><div class="dgame">情緒臉譜配對</div><div class="dcat">🎭 扮演</div></div>
+      <div class="day" data-day="30"><span class="check"></span><div class="dnum">Day 30</div><div class="dgame">種子發芽日記</div><div class="dcat">🔬 科學・長期觀察</div></div>
+    </div>
+    <div class="track-bar no-print"><span id="trackProg"></span><span class="track-reset" id="trackReset">重設進度</span></div>
+    <p class="cut-note">💡 列印出來就是紙本打卡表——每天玩完打勾 ✓，集滿 30 天給自己一個小獎勵。順序可自由調整，跟著孩子當天的心情走。</p>
+  </section>
+
+  <!-- ════ AGE GUIDE ════ -->
+  <div id="age" class="agebox">
+    <h3>📈 同一個遊戲，怎麼依年齡微調？</h3>
+    <table class="agetable">
+      <tr>
+        <th>3 歲</th>
+        <td>規則最簡化、步驟少、不計分、重點是「一起做」。多示範、多陪做，成功門檻放低，常常稱讚。專注時間約 <b>5–10 分鐘</b>，玩到一半想換很正常。</td>
+      </tr>
+      <tr>
+        <th>4 歲</th>
+        <td>可加入「輪流」「簡單規則」與少量挑戰（計時、數量目標）。開始能接受「贏／輸」，但仍需大人引導情緒。專注約 <b>10–15 分鐘</b>。</td>
+      </tr>
+      <tr>
+        <th>5 歲</th>
+        <td>能玩有策略、多步驟、需等待與遵守規則的版本，讓他<b>自己設計關卡或當小老師</b>，成就感最大。專注可達 <b>15–20 分鐘</b>以上。</td>
+      </tr>
+      <tr>
+        <th>共通原則</th>
+        <td>跟著孩子當下的興趣走、玩不下去就換；<b>過程比成品重要</b>，少糾正多描述（「你用了好多紅色！」）；讓他主導與作主能養出自信與創造力。</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ════ SAFETY ════ -->
+  <div id="safety" class="safety">
+    <h3>🛟 居家陪玩安全小提醒</h3>
+    <ul>
+      <li><b>誤食風險：</b>鈕扣、豆子、串珠、小磁鐵等小物，3 歲以下或仍會放嘴巴的孩子須全程在旁看顧；沙鈴瓶蓋一定封死。</li>
+      <li><b>氣球：</b>破掉的碎片與未吹氣的氣球是窒息高風險物，玩完立刻收走丟棄。</li>
+      <li><b>材料安全：</b>顏料、膠水選「可水洗、無毒、適幼兒」標示；鹽麵團雖無毒但含大量鹽，避免讓孩子吃。</li>
+      <li><b>剪刀：</b>用「撕」代替剪最安全；需要剪裁、挖洞時由大人代勞。</li>
+      <li><b>體能遊戲：</b>先清空尖角家具周圍、鋪好軟墊；地板別放會滑的紙張。</li>
+      <li><b>過敏：</b>麵粉、食用色素等若家中孩子有相關過敏史，先避開或換材料。</li>
+    </ul>
+  </div>
+
+  <footer class="foot">
+    🧸 幼兒居家遊戲手冊 ・ 3–5 歲 ・ 98 個遊戲（11 大類，含台灣＆各國經典）＋ 12 篇規則詳解（各國名稱）＋ 注音 ㄅㄆㄇ ＋ 剪下卡 ＋ 中英對照句型 ＋ 30 天打卡表<br>
+    可直接列印（Cmd/Ctrl + P）成冊使用，過程比成品重要，玩得開心最要緊。
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var GAME_SECTIONS = ['puzzle','craft','body','music','sensory','life','play','science','taiwan','world','brain'];
+  var cards = [];
+  GAME_SECTIONS.forEach(function(id){
+    var sec = document.getElementById(id);
+    if(!sec) return;
+    sec.querySelectorAll('.card').forEach(function(c){
+      c.dataset.cat = id;
+      var mat = '';
+      c.querySelectorAll('.meta .chip').forEach(function(ch){ if(ch.textContent.indexOf('📦')>=0) mat = ch.textContent; });
+      c.dataset.zero = (mat.indexOf('不用')>=0) ? '1' : '0';
+      var h3 = c.querySelector('h3');
+      c.dataset.title = h3 ? h3.textContent : '';
+      cards.push(c);
+      var title = c.querySelector('.title');
+      if(title){
+        var ind = document.createElement('span');
+        ind.className = 'acc-ind'; ind.textContent = '▾';
+        title.appendChild(ind);
+        title.addEventListener('click', function(){ c.classList.toggle('collapsed'); });
+      }
+      c.classList.add('collapsed');   // 互動版預設收合，方便瀏覽
+    });
+  });
+
+  // 深入解析卡也可點標題收合（瀏覽器預設收合；列印強制展開）
+  document.querySelectorAll('.deep').forEach(function(d){
+    var t = d.querySelector('.deep-title');
+    if(t){
+      var ind = document.createElement('span'); ind.className = 'acc-ind'; ind.textContent = '▾';
+      t.appendChild(ind);
+      t.addEventListener('click', function(){ d.classList.toggle('collapsed'); });
+    }
+    d.classList.add('collapsed');
+  });
+
+  var state = { cat:'all', zero:false, q:'' };
+  var countEl = document.getElementById('count');
+  function apply(){
+    var shown = 0;
+    cards.forEach(function(c){
+      var ok = true;
+      if(state.cat !== 'all' && c.dataset.cat !== state.cat) ok = false;
+      if(state.zero && c.dataset.zero !== '1') ok = false;
+      if(state.q && c.dataset.title.toLowerCase().indexOf(state.q) < 0) ok = false;
+      c.classList.toggle('hide', !ok);
+      if(ok) shown++;
+    });
+    GAME_SECTIONS.forEach(function(id){
+      var sec = document.getElementById(id); if(!sec) return;
+      sec.classList.toggle('sec-empty', !sec.querySelector('.card:not(.hide)'));
+    });
+    if(countEl) countEl.textContent = '顯示 ' + shown + ' 個遊戲';
+  }
+
+  document.querySelectorAll('#catRow .fbtn').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('#catRow .fbtn').forEach(function(x){ x.classList.remove('active'); });
+      b.classList.add('active'); state.cat = b.dataset.cat; apply();
+    });
+  });
+  var matBtn = document.getElementById('matBtn');
+  if(matBtn) matBtn.addEventListener('click', function(){ state.zero = !state.zero; matBtn.classList.toggle('active', state.zero); apply(); });
+  var search = document.getElementById('search');
+  if(search) search.addEventListener('input', function(){ state.q = search.value.trim().toLowerCase(); apply(); });
+  var ea = document.getElementById('expandAll');
+  if(ea) ea.addEventListener('click', function(){ cards.forEach(function(c){ c.classList.remove('collapsed'); }); });
+  var ca = document.getElementById('collapseAll');
+  if(ca) ca.addEventListener('click', function(){ cards.forEach(function(c){ c.classList.add('collapsed'); }); });
+  var rb = document.getElementById('randBtn');
+  if(rb) rb.addEventListener('click', function(){
+    var vis = cards.filter(function(c){ return !c.classList.contains('hide'); });
+    if(!vis.length) return;
+    var pick = vis[Math.floor(Math.random() * vis.length)];
+    pick.classList.remove('collapsed');
+    pick.scrollIntoView({ behavior:'smooth', block:'center' });
+    pick.classList.remove('flash'); void pick.offsetWidth; pick.classList.add('flash');
+  });
+
+  // 30 天打卡：localStorage 記憶
+  var KEY = 'youxi_tracker_v1', done = {};
+  try { done = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ done = {}; }
+  var days = document.querySelectorAll('.day');
+  var progEl = document.getElementById('trackProg');
+  function updProg(){
+    var n = 0; days.forEach(function(d){ if(d.classList.contains('done')) n++; });
+    if(progEl) progEl.innerHTML = '已完成 <b>' + n + '/30</b> 天' + (n >= 30 ? ' 🎉 全部完成，太棒了！' : '');
+  }
+  days.forEach(function(d){
+    var n = d.dataset.day;
+    if(done[n]) d.classList.add('done');
+    d.addEventListener('click', function(){
+      d.classList.toggle('done');
+      done[n] = d.classList.contains('done');
+      try { localStorage.setItem(KEY, JSON.stringify(done)); } catch(e){}
+      updProg();
+    });
+  });
+  var rst = document.getElementById('trackReset');
+  if(rst) rst.addEventListener('click', function(){
+    days.forEach(function(d){ d.classList.remove('done'); });
+    done = {}; try { localStorage.removeItem(KEY); } catch(e){}
+    updProg();
+  });
+  updProg();
+  apply();
+})();
+</script>
+</body>
+</html>
