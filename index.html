@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3–5 歲幼兒居家遊戲手冊｜益智・手作・體能</title>
+<title>3–7 歲幼兒居家遊戲手冊｜益智・手作・體能</title>
 <style>
   :root{
     --bg:#faf8f4;          /* 暖米白頁底 */
@@ -237,6 +237,10 @@
   .sec-worldmore .variation{background:#fbeee5; border-color:#f0d6bf;}
   .sec-coin .variation{background:#eef1f3; border-color:#d6dee3;}
   .sec-card .variation{background:#fbecef; border-color:#f0cdd5;}
+  .sec-school .sec-head h2{color:#3f5e8c;}   .sec-school .card{border-top:4px solid #3f5e8c;}   .sec-school .card .num{background:#3f5e8c;}
+  .sec-seasonal .sec-head h2{color:#c0397a;} .sec-seasonal .card{border-top:4px solid #c0397a;} .sec-seasonal .card .num{background:#c0397a;}
+  .sec-school .variation{background:#eef1f7; border-color:#d4dcea;}
+  .sec-seasonal .variation{background:#fbe9f1; border-color:#f1cce0;}
 
   /* ── 經典遊戲深入解析（規則 × 各國名稱）── */
   .deep-sec .sec-head h2{color:#2a7b8c;}
@@ -399,9 +403,9 @@
 
   <!-- ════ HERO ════ -->
   <header class="hero">
-    <span class="kicker">3–5 歲 ・ 居家陪玩</span>
+    <span class="kicker">3–7 歲 ・ 居家陪玩</span>
     <h1>🧸 幼兒居家遊戲手冊</h1>
-    <p>122 個不用買材料、用家裡現成物就能玩的遊戲，分十四大類：<b>益智・手作・體能・音樂律動・感官・生活自理・扮演情緒・科學・台灣經典童玩・各國民俗・動腦益智・世界各地更多遊戲・硬幣遊戲・撲克牌遊戲</b>，外加<b>注音 ㄅㄆㄇ・中英對照句型・30 天打卡表</b>，並為 12 個跨國經典附上<b>各國名稱與完整規則詳解</b>。每個遊戲都標好玩法步驟、材料、發展益處與變化版。</p>
+    <p>142 個不用買材料、用家裡現成物就能玩的遊戲，分十六大類：<b>益智・手作・體能・音樂律動・感官・生活自理・扮演情緒・科學・台灣經典童玩・各國民俗・動腦益智・世界各地更多遊戲・硬幣遊戲・撲克牌遊戲・學齡進階(5–7歲)・節慶季節</b>，外加<b>注音 ㄅㄆㄇ・中英對照句型・30 天打卡表</b>，並為 17 個跨國經典附上<b>各國名稱與完整規則詳解</b>。每個遊戲都標好玩法步驟、材料、發展益處與變化版。</p>
     <p style="margin-top:10px; font-size:13.5px; color:var(--amber);">💡 在瀏覽器可用上方工具列<b>搜尋・分類篩選・隨機抽一個</b>，點卡片標題展開玩法；列印（Cmd/Ctrl + P）則自動展開全部成冊。</p>
   </header>
 
@@ -422,6 +426,8 @@
     <a href="#worldmore">🪅 世界更多</a>
     <a href="#coin">🪙 硬幣</a>
     <a href="#card">🃏 撲克牌</a>
+    <a href="#school">🎒 學齡進階</a>
+    <a href="#seasonal">🎉 節慶季節</a>
     <a href="#deep">📖 規則詳解</a>
     <a href="#bpmf">🔤 注音</a>
     <a href="#cut">✂️ 注音卡</a>
@@ -455,6 +461,17 @@
       <button class="fbtn" data-cat="worldmore">🪅 世界更多</button>
       <button class="fbtn" data-cat="coin">🪙 硬幣</button>
       <button class="fbtn" data-cat="card">🃏 撲克牌</button>
+      <button class="fbtn" data-cat="school">🎒 學齡進階</button>
+      <button class="fbtn" data-cat="seasonal">🎉 節慶季節</button>
+    </div>
+    <div class="tb-row">
+      <span class="tb-label">人數</span>
+      <button class="fbtn tb-pl" data-pl="solo">🧍 可一人</button>
+      <button class="fbtn tb-pl" data-pl="pair">👥 雙人</button>
+      <button class="fbtn tb-pl" data-pl="group">👨‍👩‍👧 多人</button>
+      <span class="tb-label" style="margin-left:6px;">動靜</span>
+      <button class="fbtn tb-en2" data-en2="active">🏃 放電</button>
+      <button class="fbtn tb-en2" data-en2="quiet">🤫 安靜</button>
     </div>
     <div class="tb-row">
       <button class="fbtn tb-mat" id="matBtn">📦 只看零材料</button>
@@ -1132,7 +1149,7 @@
     <div class="sec-head">
       <span class="emoji">🎵</span>
       <div>
-        <h2>E. 音樂律動<span class="en">Music &amp; Movement</span></h2>
+        <h2>D. 音樂律動<span class="en">Music &amp; Movement</span></h2>
         <p class="sub">唱唱跳跳・練節奏、聽覺與身體協調・幾乎零材料</p>
       </div>
     </div>
@@ -1254,7 +1271,7 @@
     <div class="sec-head">
       <span class="emoji">🖐️</span>
       <div>
-        <h2>F. 感官探索<span class="en">Sensory Play</span></h2>
+        <h2>E. 感官探索<span class="en">Sensory Play</span></h2>
         <p class="sub">摸、倒、聞、看・用五感認識世界・廚房材料就能玩</p>
       </div>
     </div>
@@ -1377,7 +1394,7 @@
     <div class="sec-head">
       <span class="emoji">🍴</span>
       <div>
-        <h2>G. 生活自理小幫手<span class="en">Practical Life</span></h2>
+        <h2>F. 生活自理小幫手<span class="en">Practical Life</span></h2>
         <p class="sub">蒙特梭利風格・真實任務最有成就感・練手指與獨立</p>
       </div>
     </div>
@@ -1498,7 +1515,7 @@
     <div class="sec-head">
       <span class="emoji">🎭</span>
       <div>
-        <h2>H. 扮演與情緒<span class="en">Pretend &amp; Emotions</span></h2>
+        <h2>G. 扮演與情緒<span class="en">Pretend &amp; Emotions</span></h2>
         <p class="sub">角色扮演・發展想像力、語言與情緒理解・零成本</p>
       </div>
     </div>
@@ -1618,7 +1635,7 @@
     <div class="sec-head">
       <span class="emoji">🔬</span>
       <div>
-        <h2>I. 科學小實驗<span class="en">Mini Science</span></h2>
+        <h2>H. 科學小實驗<span class="en">Mini Science</span></h2>
         <p class="sub">猜一猜、試一試・用廚房材料玩出好奇心與觀察力</p>
       </div>
     </div>
@@ -1742,7 +1759,7 @@
     <div class="sec-head">
       <span class="emoji">🇹🇼</span>
       <div>
-        <h2>J. 台灣經典童玩・團體遊戲<span class="en">Taiwan Classics</span></h2>
+        <h2>I. 台灣經典童玩・團體遊戲<span class="en">Taiwan Classics</span></h2>
         <p class="sub">阿公阿嬤那年代玩到大的・大多零材料・最適合一群孩子一起放電</p>
       </div>
     </div>
@@ -1863,7 +1880,7 @@
     <div class="sec-head">
       <span class="emoji">🌍</span>
       <div>
-        <h2>K. 各國民俗團體遊戲<span class="en">Games Around the World</span></h2>
+        <h2>J. 各國民俗團體遊戲<span class="en">Games Around the World</span></h2>
         <p class="sub">日・韓・英美的經典童年遊戲・玩遊戲也認識世界</p>
       </div>
     </div>
@@ -1983,7 +2000,7 @@
     <div class="sec-head">
       <span class="emoji">🧩</span>
       <div>
-        <h2>L. 經典動腦益智<span class="en">Classic Brain Games</span></h2>
+        <h2>K. 經典動腦益智<span class="en">Classic Brain Games</span></h2>
         <p class="sub">流傳百年的益智遊戲・練空間、策略、記憶與手指・偏 4.5–6 歲</p>
       </div>
     </div>
@@ -2077,7 +2094,7 @@
     <div class="sec-head">
       <span class="emoji">🪅</span>
       <div>
-        <h2>M. 世界各地更多遊戲<span class="en">More World Games</span></h2>
+        <h2>L. 世界各地更多遊戲<span class="en">More World Games</span></h2>
         <p class="sub">墨西哥・德國・印度・非洲・英美…用遊戲環遊世界</p>
       </div>
     </div>
@@ -2199,7 +2216,7 @@
     <div class="sec-head">
       <span class="emoji">🪙</span>
       <div>
-        <h2>N. 硬幣遊戲<span class="en">Coin Games</span></h2>
+        <h2>M. 硬幣遊戲<span class="en">Coin Games</span></h2>
         <p class="sub">一把零錢就能玩・練手指、瞄準、數數與認識錢幣</p>
       </div>
     </div>
@@ -2321,7 +2338,7 @@
     <div class="sec-head">
       <span class="emoji">🃏</span>
       <div>
-        <h2>O. 撲克牌遊戲<span class="en">Card Games</span></h2>
+        <h2>N. 撲克牌遊戲<span class="en">Card Games</span></h2>
         <p class="sub">一副牌玩到底・練數字、配對、反應與輪流・多數偏 4–5 歲</p>
       </div>
     </div>
@@ -2435,6 +2452,300 @@
   </section>
 
   <!-- ════════════════════════════════════════════ -->
+  <!-- P. 學齡進階遊戲（5–7 歲）                        -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="school" class="sec-school">
+    <div class="sec-head">
+      <span class="emoji">🎒</span>
+      <div>
+        <h2>O. 學齡進階遊戲<span class="en">School-Age 5–7</span></h2>
+        <p class="sub">給大班到小二・需策略、輪流、讀寫與較長專注・大孩子帶小的也好玩</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>你畫我猜<span class="en">Pictionary</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 3 人+</span><span class="chip">📦 紙＋筆</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">畫出來讓大家猜，考表達與聯想。</p>
+        <ol class="steps">
+          <li>出題者抽一張詞卡（蘋果、火車、太陽），只能畫不能說話。</li>
+          <li>大家看著畫猜是什麼。</li>
+          <li>猜中的人換他畫。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>不識字用圖卡當題庫；限時 1 分鐘加刺激。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>詞語接龍<span class="en">Word Chain</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">用前一個詞的尾字接下一個詞，練詞彙。</p>
+        <ol class="steps">
+          <li>第一個人說一個詞「蘋果」。</li>
+          <li>下一個人用尾字「果」開頭接：「果汁」。</li>
+          <li>接不出或重複就換人，比誰接最長。</li>
+        </ol>
+        <div class="skills"><span class="skill s-lang">語言表達</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>太難改「同類接龍」（動物接動物）；用注音開頭接也行。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>五子棋<span class="en">Gomoku</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 2 人</span><span class="chip">📦 方格紙＋棋子</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">先連成五顆的人贏，入門的連線策略。</p>
+        <ol class="steps">
+          <li>方格紙上，一人用 O、一人用 ●。</li>
+          <li>輪流在交叉點落子。</li>
+          <li>先把自己五顆連成直、橫或斜線的人贏。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>5 歲先玩「連四」或「連三」；用圍棋子或兩色鈕扣當棋。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>點格棋<span class="en">Dots and Boxes</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 2 人</span><span class="chip">📦 點陣紙＋筆</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">連線圍出方格就得分，紙筆策略經典。</p>
+        <ol class="steps">
+          <li>紙上畫一片點陣（如 5×5 點）。</li>
+          <li>輪流連兩個相鄰點畫一條線。</li>
+          <li>誰把一個格子「封口」就在格內寫名字得一分，最後格子多的人贏。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span></div>
+        <div class="variation"><b>變化：</b>5 歲用小點陣（3×3 點）；封到格子可再畫一次。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>數字賓果<span class="en">Bingo</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 3 人+</span><span class="chip">📦 自製賓果卡</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">抽號碼連成線，練數字辨認與專注。</p>
+        <ol class="steps">
+          <li>每人一張寫滿數字的卡（5×5 或 3×3）。</li>
+          <li>主持人抽號碼喊出，有那個數字的人畫掉。</li>
+          <li>最先連成一條線喊「賓果！」獲勝。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>5 歲用 3×3、數字 1–20；改成注音或圖案賓果。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>猜字遊戲<span class="en">Hangman</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 紙＋筆</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">一格一格猜出神祕詞，練字音字形。</p>
+        <ol class="steps">
+          <li>出題者想一個詞，畫出等量空格（每格一個字或注音）。</li>
+          <li>猜的人猜字/注音，對就填進格、錯就記一筆。</li>
+          <li>在畫完「小人」前猜出整個詞就贏。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>用注音來猜（ㄆㄧㄥˊㄍㄨㄛˇ＝蘋果）；給圖示提示降難度。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>跳棋<span class="en">Checkers</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 2 人</span><span class="chip">📦 棋盤＋棋子</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">斜走、跳吃對方棋，經典策略桌遊。</p>
+        <ol class="steps">
+          <li>各自棋子排在棋盤一側。</li>
+          <li>棋子只能斜前走一格；若對方棋子斜前方有空位，可「跳過去吃掉」。</li>
+          <li>把對方棋子吃光或困住的人贏。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>5 歲用少量棋子玩簡化版；用兩色瓶蓋當棋。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>迷你數獨<span class="en">Mini Sudoku</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人</span><span class="chip">📦 4×4 方格</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">4×4 入門數獨，練邏輯推理。</p>
+        <ol class="steps">
+          <li>4×4 格分成四個 2×2 區，要填數字 1–4。</li>
+          <li>規則：每行、每列、每個 2×2 區都不能有重複數字。</li>
+          <li>從已知數字推出空格該填什麼。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>用 4 種顏色或圖案代替數字給不識字的孩子；先玩 2×2 版。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">9</span><h3>二十個問題<span class="en">20 Questions</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 不用</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">用 20 個是非題推理出答案。</p>
+        <ol class="steps">
+          <li>出題者心裡想一個東西（動物、物品）。</li>
+          <li>大家輪流問是非題：「它是動物嗎？」「比貓大嗎？」</li>
+          <li>在 20 個問題內猜出答案就贏。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>5 歲縮成 10 題、限定類別（只猜動物）。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">10</span><h3>跳繩童謠<span class="en">Jump Rope Rhymes</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 一條跳繩</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">邊跳邊唸童謠，協調與節奏一起練。</p>
+        <ol class="steps">
+          <li>一個人甩繩跳，或兩人甩、一人跳。</li>
+          <li>配童謠節奏跳（如「一角兩角三角形…」）。</li>
+          <li>數連續跳幾下，踩到繩就換人。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>5 歲先「繩放地上跳過去」或原地模擬跳；長繩兩人甩、抓時機進去。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- Q. 節慶季節遊戲                                  -->
+  <!-- ════════════════════════════════════════════ -->
+  <section id="seasonal" class="sec-seasonal">
+    <div class="sec-head">
+      <span class="emoji">🎉</span>
+      <div>
+        <h2>P. 節慶季節遊戲<span class="en">Festivals &amp; Seasons</span></h2>
+        <p class="sub">中秋・過年・端午・元宵 ＋ 萬聖節・復活節・聖誕・冬至・搓湯圓</p>
+      </div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="title"><span class="num">1</span><h3>中秋・博餅 🥮<span class="en">Mooncake Dice</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 3 人+</span><span class="chip">📦 6 顆骰子＋碗</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">閩台中秋傳統：擲骰比點數贏月餅或小獎品。</p>
+        <ol class="steps">
+          <li>一個大碗，6 顆骰子。</li>
+          <li>輪流把骰子擲進碗裡。</li>
+          <li>看誰擲到最多「4 點」，最多的人當「狀元」拿大獎。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>小小孩只比「誰擲到最多 4 點」；獎品換成貼紙、小點心。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">2</span><h3>中秋/元宵・提燈籠 🏮<span class="en">Lantern Walk</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 自製燈籠</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">做一個燈籠，晚上提著散步。</p>
+        <ol class="steps">
+          <li>用紙杯、紙袋或回收罐做燈籠（內放小燈或手電筒，不用真火）。</li>
+          <li>彩繪裝飾。</li>
+          <li>天黑後提著到社區走一圈。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>紙杯剪流蘇做金魚燈；比誰的燈籠最亮最特別。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">3</span><h3>元宵・猜燈謎 🧧<span class="en">Riddles</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 紙條</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">猜簡單謎語，動腦又應景。</p>
+        <ol class="steps">
+          <li>大人準備幾個幼兒版謎語（「四隻腳、會汪汪」→ 狗）。</li>
+          <li>寫在紙條上掛起來。</li>
+          <li>孩子猜中就拿下紙條換小獎。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-lang">語言表達</span></div>
+        <div class="variation"><b>變化：</b>用圖片當謎面給不識字的孩子；讓孩子自己出謎考大人。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">4</span><h3>過年・紅包數錢 🧧<span class="en">Red Envelope</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 紅包＋硬幣</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">把壓歲錢分裝、數一數，認識錢與祝福。</p>
+        <ol class="steps">
+          <li>給幾個紅包袋與一些硬幣（或玩具錢）。</li>
+          <li>數出指定金額放進紅包。</li>
+          <li>練習雙手奉上紅包說「恭喜發財」。</li>
+        </ol>
+        <div class="skills"><span class="skill s-cog">認知思考</span><span class="skill s-fine">精細動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>連到〈開商店〉用紅包錢買賣；認識紅色＝喜氣。</div>
+        <div class="tip"><b>安全：</b>硬幣小，看顧避免誤食。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">5</span><h3>過年・畫春聯寫福字 🖌️<span class="en">Spring Couplet</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 紅紙＋筆</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">在紅紙上畫吉祥圖、寫「福」字。</p>
+        <ol class="steps">
+          <li>裁好紅紙。</li>
+          <li>畫春節元素（橘子、鞭炮、生肖動物）或描寫「福」字。</li>
+          <li>貼在門上或窗上佈置。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>「福」字故意倒貼＝「福到」；蓋手印當裝飾邊框。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">6</span><h3>端午・立蛋 🥚<span class="en">Egg Standing</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 生雞蛋</span><span class="chip">⭐ ☆☆☆</span></div>
+        <p class="lead">端午正午把蛋立起來，傳說會成功。</p>
+        <ol class="steps">
+          <li>拿一顆生雞蛋。</li>
+          <li>在平面上慢慢調整、找重心讓它站立。</li>
+          <li>立起來就成功，比誰先立好。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-cog">認知思考</span></div>
+        <div class="variation"><b>變化：</b>平常日也能玩、不限端午；用熟蛋較好立給小小孩。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">7</span><h3>端午・香包 DIY 🎋<span class="en">Scent Bag</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 20 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 布＋棉花/香料</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">做一個香香的小袋子掛身上。</p>
+        <ol class="steps">
+          <li>小塊布包進棉花＋一點乾燥香料（艾草、薰衣草）。</li>
+          <li>收口用繩綁緊。</li>
+          <li>綁上掛繩戴在身上或掛包包。</li>
+        </ol>
+        <div class="skills"><span class="skill s-fine">精細動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>不縫版：直接用束口小袋裝；外面畫圖案裝飾。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">8</span><h3>萬聖節・木乃伊纏纏樂 🎃<span class="en">Mummy Wrap</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 2 人+</span><span class="chip">📦 衛生紙</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">用衛生紙把人纏成木乃伊，超歡樂。</p>
+        <ol class="steps">
+          <li>兩人一組，一人當木乃伊站好。</li>
+          <li>另一人用整捲衛生紙把他從頭纏到腳（眼、口留著）。</li>
+          <li>比哪組最快纏完、最像木乃伊。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-fine">精細動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>改用舊布條可重複玩不浪費；纏完拍照留念。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">9</span><h3>萬聖節・咬蘋果 🍎<span class="en">Apple Bobbing</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 10 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 盆＋蘋果</span><span class="chip">⭐ ☆☆</span></div>
+        <p class="lead">西方萬聖經典：不用手、只用嘴咬起漂浮的蘋果。</p>
+        <ol class="steps">
+          <li>大盆裝水，放幾顆蘋果浮在水面。</li>
+          <li>雙手背在後面，只用嘴去咬蘋果。</li>
+          <li>最快咬起的人贏。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>怕嗆水改「叉子戳蘋果」，或吊一顆蘋果用嘴咬；玩後擦乾。</div>
+        <div class="tip"><b>安全：</b>玩水不離視線。</div>
+      </div>
+
+      <div class="card">
+        <div class="title"><span class="num">10</span><h3>復活節・找彩蛋 🐰<span class="en">Egg Hunt</span></h3></div>
+        <div class="meta"><span class="chip">⏱️ 15 分</span><span class="chip">👥 1 人+</span><span class="chip">📦 彩蛋/小物</span><span class="chip">⭐ ☆</span></div>
+        <p class="lead">把彩蛋藏起來讓孩子找，西方春天經典。</p>
+        <ol class="steps">
+          <li>大人把彩蛋（或塑膠蛋、貼紙）藏在家中各處。</li>
+          <li>給孩子一個小籃子去尋找。</li>
+          <li>找到最多的人贏，或大家平分。</li>
+        </ol>
+        <div class="skills"><span class="skill s-gross">大動作</span><span class="skill s-cog">認知思考</span><span class="skill s-social">社交情緒</span></div>
+        <div class="variation"><b>變化：</b>給「冷／熱」提示幫小小孩；蛋裡藏小紙條任務（學一聲動物叫）。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
   <!-- 📖 經典遊戲深入解析（規則 × 各國名稱）           -->
   <!-- ════════════════════════════════════════════ -->
   <section id="deep" class="deep-sec">
@@ -2442,7 +2753,7 @@
       <span class="emoji">📖</span>
       <div>
         <h2>經典遊戲深入解析<span class="en">In-Depth Rules &amp; Names</span></h2>
-        <p class="sub">12 個跨國經典・附各國名稱（原文＋拼音）＋完整規則、口訣、勝負、變體</p>
+        <p class="sub">17 個跨國經典・附各國名稱（原文＋拼音）＋完整規則、口訣、勝負、變體</p>
       </div>
     </div>
 
@@ -2750,6 +3061,119 @@
       </div>
     </div>
 
+    <div class="deep">
+      <h3 class="deep-title">🫘 播棋<span class="den">Mancala</span></h3>
+      <div class="deep-names">
+        <span class="nm">🌍 Mancala（總稱，阿拉伯語「移動」）</span>
+        <span class="nm">🇬🇭 Oware（西非）</span>
+        <span class="nm">🇲🇾🇮🇩 Congkak</span>
+        <span class="nm">🇻🇳 Ô ăn quan</span>
+        <span class="nm">🇺🇸 Kalah</span>
+        <span class="nm">🇹🇼 播棋／撒豆棋</span>
+      </div>
+      <div class="deep-meta">👥 2 人 ・ 📦 蛋盒＋約 48 顆豆/石 ・ 🏠 桌面 ・ ⭐ ☆☆☆ ・ 偏 5 歲+</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>蛋盒當棋盤：兩排各 6 個小坑，兩端各一個「庫」屬於各自；開局每個小坑放 4 顆豆。</li>
+          <li>抓起自己這側任一坑的全部豆子，沿逆時針方向，每經一個坑（含自己的庫，跳過對方的庫）放一顆。</li>
+          <li>最後一顆正好落在自己的庫 → 可再走一次。</li>
+          <li>最後一顆落在自己這側的空坑 → 可「吃」對面那坑的豆子，連同這顆放進自己的庫。</li>
+          <li>一方坑全空時結束，剩餘豆歸對方；庫裡豆子多的人贏。</li>
+        </ol>
+        <h5>適齡・安全</h5>
+        <p>偏 5–7 歲；豆子小、3 歲以下勿玩、需全程看顧。幼兒可只練「逆時針一坑放一顆」不計輸贏。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🪜 蛇梯棋<span class="den">Snakes &amp; Ladders</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇮🇳 Moksha Patam（古印度原型）</span>
+        <span class="nm">🇬🇧 Snakes and Ladders</span>
+        <span class="nm">🇺🇸 Chutes and Ladders（蛇改溜滑梯）</span>
+        <span class="nm">🇹🇼 蛇梯棋</span>
+      </div>
+      <div class="deep-meta">👥 2 人+ ・ 📦 棋盤＋骰子＋棋子 ・ ⭐ ☆☆ ・ 4–7 歲</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>棋盤 1→100（幼兒可用 1→30），格上分布若干梯子與蛇。</li>
+          <li>輪流擲一顆骰子，棋子前進對應步數。</li>
+          <li>停在梯子底 → 沿梯往上爬（前進）；停在蛇頭 → 沿蛇身滑到蛇尾（後退）。</li>
+          <li>最先抵達最後一格的人贏。</li>
+        </ol>
+        <h5>小知識</h5>
+        <div class="chant">源自古印度道德教育遊戲 Moksha Patam，梯子象徵善行、蛇象徵惡行；19 世紀傳入英國成為大眾棋。</div>
+        <h5>適齡</h5>
+        <p>4 歲可玩（純運氣、邊走邊數）；自製紙盤親子共畫蛇與梯最有感。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🃏 圖卡賓果<span class="den">Lotería</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇲🇽 Lotería</span>
+        <span class="nm">🌍 Picture Bingo / Image Bingo</span>
+        <span class="nm">🇪🇸 Lotería（西語「樂透」）</span>
+      </div>
+      <div class="deep-meta">👥 3 人+ ・ 📦 圖卡＋蓋子（豆/瓶蓋）・ ⭐ ☆☆ ・ 3–7 歲</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>每人一張畫有不同圖案的卡（幼兒 2×2 或 3×3，大孩子 4×4）：太陽 El Sol、月亮 La Luna、美人魚 La Sirena…。</li>
+          <li>主持人（cantor）從一疊單張圖卡抽一張，用俏皮話或直接喊出圖名。</li>
+          <li>卡上有那個圖的人用豆子或瓶蓋蓋住。</li>
+          <li>最先依約定形狀（一線、四角、全滿）蓋好的人喊「¡Lotería!」獲勝。</li>
+        </ol>
+        <h5>文化・適齡</h5>
+        <p>墨西哥傳統圖案賓果，常見於市集與家庭聚會。用圖不用數字，3 歲也能玩；自製圖卡＝認知＋美勞二合一。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">🪢 跳繩<span class="den">Jump Rope</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇹🇼🇨🇳 跳繩</span>
+        <span class="nm">🇬🇧 Skipping</span>
+        <span class="nm">🇺🇸 Jump Rope / Double Dutch（雙繩）</span>
+        <span class="nm">🇯🇵 なわとび <i>nawatobi</i></span>
+        <span class="nm">🇰🇷 줄넘기 <i>julneomgi</i></span>
+      </div>
+      <div class="deep-meta">👥 1 人+（長繩需 3 人）・ 📦 一條繩 ・ 🏠 戶外/寬敞處 ・ ⭐ ☆☆☆ ・ 5–7 歲</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>單人：雙手甩繩過頭、過腳，連續跳。</li>
+          <li>長繩：兩人各持一端甩，其他人抓時機跑進去跳，配童謠數拍。</li>
+          <li>進階「Double Dutch」：兩條繩反向同時甩，跳者在中間跳。</li>
+        </ol>
+        <h5>適齡・安全</h5>
+        <p>單人跳繩約 5 歲＋（需協調成熟）；3–4 歲先「繩放地上跳過去」或原地模擬跳。空間清空避免甩到人。</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <h3 class="deep-title">⚫ 五子棋<span class="den">Gomoku</span></h3>
+      <div class="deep-names">
+        <span class="nm">🇨🇳 五子棋／連珠</span>
+        <span class="nm">🇯🇵 五目並べ <i>gomoku narabe</i>／連珠 Renju</span>
+        <span class="nm">🇰🇷 오목 <i>omok</i></span>
+        <span class="nm">🇬🇧🇺🇸 Five in a Row</span>
+      </div>
+      <div class="deep-meta">👥 2 人 ・ 📦 方格紙/棋盤＋兩色棋子 ・ ⭐ ☆☆☆ ・ 5–7 歲</div>
+      <div class="deep-body">
+        <h5>玩法</h5>
+        <ol>
+          <li>棋盤交叉點上，雙方各執一色，輪流落子（落子後不能移動）。</li>
+          <li>目標：率先讓自己 5 顆連成一直線、橫線或斜線。</li>
+          <li>對手快連成時要「擋」在缺口；同時佈自己的線形成雙重威脅。</li>
+        </ol>
+        <h5>變體・適齡</h5>
+        <p>日本競技 Renju 對黑棋有禁手規則平衡先手；幼兒先玩「連三、連四」。5 歲懂「連線」與「擋」即可玩，用圍棋子、鈕扣或方格紙畫 O/●。</p>
+      </div>
+    </div>
+
   </section>
 
   <!-- ════════════════════════════════════════════ -->
@@ -2759,7 +3183,7 @@
     <div class="sec-head">
       <span class="emoji">🔤</span>
       <div>
-        <h2>D. 注音 ㄅㄆㄇ 遊戲<span class="en">Bopomofo Play</span></h2>
+        <h2>注音 ㄅㄆㄇ 遊戲<span class="en">Bopomofo Play</span></h2>
         <p class="sub">用玩的接觸符號・適合 4.5–6 歲・重點是熟悉不是背誦</p>
       </div>
     </div>
@@ -3042,6 +3466,14 @@
         <td>能玩有策略、多步驟、需等待與遵守規則的版本，讓他<b>自己設計關卡或當小老師</b>，成就感最大。專注可達 <b>15–20 分鐘</b>以上。</td>
       </tr>
       <tr>
+        <th>6 歲</th>
+        <td>能接受「輪流等待、簡單策略、規則較多」的遊戲（井字、比大小、抽鬼牌、賓果）；開始讀數字/注音、寫簡單字，輸贏情緒較穩。專注約 <b>20–25 分鐘</b>。可從 <b>P. 學齡進階</b>區挑簡單的玩。</td>
+      </tr>
+      <tr>
+        <th>7 歲</th>
+        <td>能玩多步驟策略與推理遊戲（五子棋、跳棋、Go Fish、數獨、20 問題），自己看規則、競爭與合作並重，很適合<b>當小老師帶弟妹</b>。專注 <b>25–30 分鐘</b>以上，喜歡計分、破關、刷紀錄。</td>
+      </tr>
+      <tr>
         <th>共通原則</th>
         <td>跟著孩子當下的興趣走、玩不下去就換；<b>過程比成品重要</b>，少糾正多描述（「你用了好多紅色！」）；讓他主導與作主能養出自信與創造力。</td>
       </tr>
@@ -3062,7 +3494,7 @@
   </div>
 
   <footer class="foot">
-    🧸 幼兒居家遊戲手冊 ・ 3–5 歲 ・ 122 個遊戲（14 大類，含台灣/各國/硬幣/撲克牌）＋ 12 篇規則詳解（各國名稱）＋ 注音 ㄅㄆㄇ ＋ 剪下卡 ＋ 中英對照句型 ＋ 30 天打卡表<br>
+    🧸 幼兒居家遊戲手冊 ・ 3–7 歲 ・ 142 個遊戲（16 大類，含學齡進階＋節慶季節）＋ 17 篇規則詳解（各國名稱）＋ 注音 ㄅㄆㄇ ＋ 剪下卡 ＋ 中英對照句型 ＋ 30 天打卡表<br>
     可直接列印（Cmd/Ctrl + P）成冊使用，過程比成品重要，玩得開心最要緊。
   </footer>
 
@@ -3070,16 +3502,26 @@
 
 <script>
 (function(){
-  var GAME_SECTIONS = ['puzzle','craft','body','music','sensory','life','play','science','taiwan','world','brain','worldmore','coin','card'];
+  var GAME_SECTIONS = ['puzzle','craft','body','music','sensory','life','play','science','taiwan','world','brain','worldmore','coin','card','school','seasonal'];
   var cards = [];
   GAME_SECTIONS.forEach(function(id){
     var sec = document.getElementById(id);
     if(!sec) return;
     sec.querySelectorAll('.card').forEach(function(c){
       c.dataset.cat = id;
-      var mat = '';
-      c.querySelectorAll('.meta .chip').forEach(function(ch){ if(ch.textContent.indexOf('📦')>=0) mat = ch.textContent; });
+      var mat = '', ppl = '';
+      c.querySelectorAll('.meta .chip').forEach(function(ch){
+        var t = ch.textContent;
+        if(t.indexOf('📦')>=0) mat = t;
+        if(t.indexOf('👥')>=0) ppl = t;
+      });
       c.dataset.zero = (mat.indexOf('不用')>=0) ? '1' : '0';
+      var pm = ppl.match(/(\d+)/);
+      c.dataset.ppl = pm ? pm[1] : '';
+      c.dataset.plus = ppl.indexOf('+')>=0 ? '1' : '0';
+      var active = false;
+      c.querySelectorAll('.skill').forEach(function(s){ if(s.textContent.indexOf('大動作')>=0) active = true; });
+      c.dataset.energy = active ? 'active' : 'quiet';
       var h3 = c.querySelector('h3');
       c.dataset.title = h3 ? h3.textContent : '';
       cards.push(c);
@@ -3105,7 +3547,7 @@
     d.classList.add('collapsed');
   });
 
-  var state = { cat:'all', zero:false, q:'' };
+  var state = { cat:'all', zero:false, q:'', pl:null, energy:null };
   var countEl = document.getElementById('count');
   function apply(){
     var shown = 0;
@@ -3114,6 +3556,14 @@
       if(state.cat !== 'all' && c.dataset.cat !== state.cat) ok = false;
       if(state.zero && c.dataset.zero !== '1') ok = false;
       if(state.q && c.dataset.title.toLowerCase().indexOf(state.q) < 0) ok = false;
+      if(state.pl){
+        var n = parseInt(c.dataset.ppl||'0',10), plus = c.dataset.plus==='1';
+        var okpl = state.pl==='solo' ? (n===1)
+                 : state.pl==='pair' ? (n===2 || (n<=2 && plus))
+                 : (n>=3 || plus);
+        if(!okpl) ok = false;
+      }
+      if(state.energy && c.dataset.energy !== state.energy) ok = false;
       c.classList.toggle('hide', !ok);
       if(ok) shown++;
     });
@@ -3132,6 +3582,22 @@
   });
   var matBtn = document.getElementById('matBtn');
   if(matBtn) matBtn.addEventListener('click', function(){ state.zero = !state.zero; matBtn.classList.toggle('active', state.zero); apply(); });
+  document.querySelectorAll('.tb-pl').forEach(function(b){
+    b.addEventListener('click', function(){
+      var v = b.dataset.pl;
+      if(state.pl === v){ state.pl = null; b.classList.remove('active'); }
+      else { state.pl = v; document.querySelectorAll('.tb-pl').forEach(function(x){ x.classList.toggle('active', x===b); }); }
+      apply();
+    });
+  });
+  document.querySelectorAll('.tb-en2').forEach(function(b){
+    b.addEventListener('click', function(){
+      var v = b.dataset.en2;
+      if(state.energy === v){ state.energy = null; b.classList.remove('active'); }
+      else { state.energy = v; document.querySelectorAll('.tb-en2').forEach(function(x){ x.classList.toggle('active', x===b); }); }
+      apply();
+    });
+  });
   var search = document.getElementById('search');
   if(search) search.addEventListener('input', function(){ state.q = search.value.trim().toLowerCase(); apply(); });
   var ea = document.getElementById('expandAll');
