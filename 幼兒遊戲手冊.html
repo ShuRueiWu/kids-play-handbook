@@ -321,6 +321,16 @@
   }
   .tb-search:focus{border-color:var(--blue);}
   .tb-count{font-size:12.5px; color:var(--ink2); margin-left:auto;}
+  .tb-select{font-size:13.5px; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:999px; padding:7px 12px; cursor:pointer; outline:none; max-width:150px;}
+  .tb-select:focus{border-color:var(--blue);}
+  .tb-more{display:none; margin-top:9px;}
+  .tb-more.open{display:block;}
+
+  /* 圖示說明：可折疊 */
+  .legend h4{display:flex; align-items:center; cursor:pointer;}
+  .legend.collapsed h4{margin-bottom:0;}
+  .legend.collapsed .row{display:none;}
+  .legend.collapsed .acc-ind{transform:rotate(-90deg);}
 
   /* Accordion（卡片展開/收合）*/
   .card .title{cursor:pointer;}
@@ -372,6 +382,7 @@
     .card.collapsed .lead,.card.collapsed .meta,.card.collapsed .steps,
     .card.collapsed .skills,.card.collapsed .variation,.card.collapsed .tip{display:block !important;}
     #scene.collapsed .scene-grid,#scene.collapsed .sec-head .sub{display:block !important;}
+    .legend.collapsed .row{display:block !important;}
     .acc-ind{display:none !important;}
   }
 
@@ -449,43 +460,45 @@
   <div class="toolbar no-print" id="toolbar">
     <div class="tb-row">
       <span class="tb-label">🔍</span>
-      <input class="tb-search" id="search" type="text" placeholder="搜尋遊戲關鍵字，如：氣球、顏色、安靜、睡前…">
-      <button class="fbtn tb-rand" id="randBtn">🎲 隨機抽一個</button>
-    </div>
-    <div class="tb-row" id="catRow">
-      <span class="tb-label">分類</span>
-      <button class="fbtn active" data-cat="all">全部</button>
-      <button class="fbtn" data-cat="puzzle">🧠 益智</button>
-      <button class="fbtn" data-cat="craft">✂️ 手作</button>
-      <button class="fbtn" data-cat="body">🤸 體能</button>
-      <button class="fbtn" data-cat="music">🎵 音樂</button>
-      <button class="fbtn" data-cat="sensory">🖐️ 感官</button>
-      <button class="fbtn" data-cat="life">🍴 生活自理</button>
-      <button class="fbtn" data-cat="play">🎭 扮演</button>
-      <button class="fbtn" data-cat="science">🔬 科學</button>
-      <button class="fbtn" data-cat="taiwan">🇹🇼 台灣</button>
-      <button class="fbtn" data-cat="world">🌍 各國</button>
-      <button class="fbtn" data-cat="brain">🧩 益智經典</button>
-      <button class="fbtn" data-cat="worldmore">🪅 世界更多</button>
-      <button class="fbtn" data-cat="coin">🪙 硬幣</button>
-      <button class="fbtn" data-cat="card">🃏 撲克牌</button>
-      <button class="fbtn" data-cat="school">🎒 學齡進階</button>
-      <button class="fbtn" data-cat="seasonal">🎉 節慶季節</button>
-    </div>
-    <div class="tb-row">
-      <span class="tb-label">人數</span>
-      <button class="fbtn tb-pl" data-pl="solo">🧍 可一人</button>
-      <button class="fbtn tb-pl" data-pl="pair">👥 雙人</button>
-      <button class="fbtn tb-pl" data-pl="group">👨‍👩‍👧 多人</button>
-      <span class="tb-label" style="margin-left:6px;">動靜</span>
-      <button class="fbtn tb-en2" data-en2="active">🏃 放電</button>
-      <button class="fbtn tb-en2" data-en2="quiet">🤫 安靜</button>
-    </div>
-    <div class="tb-row">
-      <button class="fbtn tb-mat" id="matBtn">📦 只看零材料</button>
-      <button class="fbtn" id="expandAll">⬇ 展開全部</button>
-      <button class="fbtn" id="collapseAll">⬆ 收合全部</button>
+      <input class="tb-search" id="search" type="text" placeholder="搜尋遊戲…">
+      <select class="tb-select" id="catSelect" aria-label="分類">
+        <option value="all">📂 全部分類</option>
+        <option value="puzzle">🧠 益智動腦</option>
+        <option value="craft">✂️ 手作創意</option>
+        <option value="body">🤸 體能放電</option>
+        <option value="music">🎵 音樂律動</option>
+        <option value="sensory">🖐️ 感官探索</option>
+        <option value="life">🍴 生活自理</option>
+        <option value="play">🎭 扮演情緒</option>
+        <option value="science">🔬 科學實驗</option>
+        <option value="taiwan">🇹🇼 台灣童玩</option>
+        <option value="world">🌍 各國民俗</option>
+        <option value="brain">🧩 動腦益智</option>
+        <option value="worldmore">🪅 世界更多</option>
+        <option value="coin">🪙 硬幣遊戲</option>
+        <option value="card">🃏 撲克牌</option>
+        <option value="school">🎒 學齡進階</option>
+        <option value="seasonal">🎉 節慶季節</option>
+      </select>
+      <button class="fbtn tb-rand" id="randBtn" title="隨機抽一個遊戲">🎲</button>
+      <button class="fbtn" id="moreBtn">⚙ 更多篩選 ▾</button>
       <span class="tb-count" id="count"></span>
+    </div>
+    <div class="tb-more" id="tbMore">
+      <div class="tb-row">
+        <span class="tb-label">人數</span>
+        <button class="fbtn tb-pl" data-pl="solo">🧍 可一人</button>
+        <button class="fbtn tb-pl" data-pl="pair">👥 雙人</button>
+        <button class="fbtn tb-pl" data-pl="group">👨‍👩‍👧 多人</button>
+        <span class="tb-label" style="margin-left:6px;">動靜</span>
+        <button class="fbtn tb-en2" data-en2="active">🏃 放電</button>
+        <button class="fbtn tb-en2" data-en2="quiet">🤫 安靜</button>
+      </div>
+      <div class="tb-row">
+        <button class="fbtn tb-mat" id="matBtn">📦 只看零材料</button>
+        <button class="fbtn" id="expandAll">⬇ 展開全部</button>
+        <button class="fbtn" id="collapseAll">⬆ 收合全部</button>
+      </div>
     </div>
   </div>
 
@@ -3700,6 +3713,19 @@
     sc.classList.add('collapsed');
   })();
 
+  // 圖示說明：預設折疊（點標題展開；列印自動展開）
+  (function(){
+    var lg = document.querySelector('.legend');
+    if(!lg) return;
+    var h = lg.querySelector('h4');
+    if(h){
+      var ind = document.createElement('span'); ind.className = 'acc-ind'; ind.textContent = '▾';
+      h.appendChild(ind);
+      h.addEventListener('click', function(){ lg.classList.toggle('collapsed'); });
+    }
+    lg.classList.add('collapsed');
+  })();
+
   var state = { cat:'all', zero:false, q:'', pl:null, energy:null };
   var countEl = document.getElementById('count');
   function apply(){
@@ -3727,11 +3753,13 @@
     if(countEl) countEl.textContent = '顯示 ' + shown + ' 個遊戲';
   }
 
-  document.querySelectorAll('#catRow .fbtn').forEach(function(b){
-    b.addEventListener('click', function(){
-      document.querySelectorAll('#catRow .fbtn').forEach(function(x){ x.classList.remove('active'); });
-      b.classList.add('active'); state.cat = b.dataset.cat; apply();
-    });
+  var catSelect = document.getElementById('catSelect');
+  if(catSelect) catSelect.addEventListener('change', function(){ state.cat = catSelect.value; apply(); });
+  var moreBtn = document.getElementById('moreBtn'), tbMore = document.getElementById('tbMore');
+  if(moreBtn && tbMore) moreBtn.addEventListener('click', function(){
+    var open = tbMore.classList.toggle('open');
+    moreBtn.classList.toggle('active', open);
+    moreBtn.innerHTML = open ? '⚙ 更多篩選 ▴' : '⚙ 更多篩選 ▾';
   });
   var matBtn = document.getElementById('matBtn');
   if(matBtn) matBtn.addEventListener('click', function(){ state.zero = !state.zero; matBtn.classList.toggle('active', state.zero); apply(); });
