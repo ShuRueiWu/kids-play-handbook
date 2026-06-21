@@ -338,6 +338,13 @@
   @keyframes flash{0%,100%{box-shadow:var(--shadow);} 15%,55%{box-shadow:0 0 0 3px var(--amber-line), var(--shadow-lg);}}
   .sec-empty{display:none;}
 
+  /* 情境快選：可折疊（預設折疊由 JS 設定；列印自動展開） */
+  #scene .sec-head{cursor:pointer;}
+  #scene.collapsed .sec-head{border-bottom:none; padding-bottom:6px;}
+  #scene.collapsed .sec-head .sub{display:none;}
+  #scene.collapsed .scene-grid{display:none;}
+  #scene.collapsed .acc-ind{transform:rotate(-90deg);}
+
   /* 30 天打卡表 */
   .track-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin-top:18px;}
   .day{
@@ -364,6 +371,7 @@
     .no-print{display:none !important;}
     .card.collapsed .lead,.card.collapsed .meta,.card.collapsed .steps,
     .card.collapsed .skills,.card.collapsed .variation,.card.collapsed .tip{display:block !important;}
+    #scene.collapsed .scene-grid,#scene.collapsed .sec-head .sub{display:block !important;}
     .acc-ind{display:none !important;}
   }
 
@@ -3678,6 +3686,19 @@
     }
     d.classList.add('collapsed');
   });
+
+  // 情境快選：預設折疊（點標題列展開；列印自動展開、不受影響）
+  (function(){
+    var sc = document.getElementById('scene');
+    if(!sc) return;
+    var head = sc.querySelector('.sec-head');
+    if(head){
+      var ind = document.createElement('span'); ind.className = 'acc-ind'; ind.textContent = '▾';
+      head.appendChild(ind);
+      head.addEventListener('click', function(){ sc.classList.toggle('collapsed'); });
+    }
+    sc.classList.add('collapsed');
+  })();
 
   var state = { cat:'all', zero:false, q:'', pl:null, energy:null };
   var countEl = document.getElementById('count');
